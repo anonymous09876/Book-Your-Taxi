@@ -1,0 +1,165 @@
+      <div class="service-area bg py-120">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 mx-auto">
+              <div class="site-heading text-center">
+                <span class="site-title-tagline">Services</span>
+                <h2 class="site-title">Our Best Services For You</h2>
+                <div class="heading-divider"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <div class="service-item wow fadeInUp" data-wow-delay=".25s">
+                <div class="service-img">
+                  <img src="assets/img/service/01.jpg" alt />
+                </div>
+                <div class="service-icon">
+                  <img src="assets/img/icon/taxi-booking-1.svg" alt />
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">
+                    <a href="#">Online Booking</a>
+                  </h3>
+                  <p class="service-text">
+                    There are many variations of passages orem psum available
+                    but the majority have suffered alteration in some form by
+                    injected.
+                  </p>
+                  <div class="service-arrow">
+                    <a href="#" class="theme-btn"
+                      >Read More<i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="service-item wow fadeInUp" data-wow-delay=".50s">
+                <div class="service-img">
+                  <img src="assets/img/service/02.jpg" alt />
+                </div>
+                <div class="service-icon">
+                  <img src="assets/img/icon/city-taxi.svg" alt />
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">
+                    <a href="#">City Transport</a>
+                  </h3>
+                  <p class="service-text">
+                    There are many variations of passages orem psum available
+                    but the majority have suffered alteration in some form by
+                    injected.
+                  </p>
+                  <div class="service-arrow">
+                    <a href="#" class="theme-btn"
+                      >Read More<i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="service-item wow fadeInUp" data-wow-delay=".75s">
+                <div class="service-img">
+                  <img src="assets/img/service/03.jpg" alt />
+                </div>
+                <div class="service-icon">
+                  <img src="assets/img/icon/airport.svg" alt />
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">
+                    <a href="#">Airport Transport</a>
+                  </h3>
+                  <p class="service-text">
+                    There are many variations of passages orem psum available
+                    but the majority have suffered alteration in some form by
+                    injected.
+                  </p>
+                  <div class="service-arrow">
+                    <a href="#" class="theme-btn"
+                      >Read More<i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="service-item wow fadeInUp" data-wow-delay=".25s">
+                <div class="service-img">
+                  <img src="assets/img/service/04.jpg" alt />
+                </div>
+                <div class="service-icon">
+                  <img src="assets/img/icon/business.svg" alt />
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">
+                    <a href="#">Business Transport</a>
+                  </h3>
+                  <p class="service-text">
+                    There are many variations of passages orem psum available
+                    but the majority have suffered alteration in some form by
+                    injected.
+                  </p>
+                  <div class="service-arrow">
+                    <a href="#" class="theme-btn"
+                      >Read More<i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="service-item wow fadeInUp" data-wow-delay=".50s">
+                <div class="service-img">
+                  <img src="assets/img/service/05.jpg" alt />
+                </div>
+                <div class="service-icon">
+                  <img src="assets/img/icon/taxi-2.svg" alt />
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">
+                    <a href="#">Regular Transport</a>
+                  </h3>
+                  <p class="service-text">
+                    There are many variations of passages orem psum available
+                    but the majority have suffered alteration in some form by
+                    injected.
+                  </p>
+                  <div class="service-arrow">
+                    <a href="#" class="theme-btn"
+                      >Read More<i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="service-item wow fadeInUp" data-wow-delay=".75s">
+                <div class="service-img">
+                  <img src="assets/img/service/06.jpg" alt />
+                </div>
+                <div class="service-icon">
+                  <img src="assets/img/icon/taxi.svg" alt />
+                </div>
+                <div class="service-content">
+                  <h3 class="service-title">
+                    <a href="#">Tour Transport</a>
+                  </h3>
+                  <p class="service-text">
+                    There are many variations of passages orem psum available
+                    but the majority have suffered alteration in some form by
+                    injected.
+                  </p>
+                  <div class="service-arrow">
+                    <a href="#" class="theme-btn"
+                      >Read More<i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
