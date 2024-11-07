@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="assets/css/jquery.timepicker.min.css" />
     <link rel="stylesheet" href="assets/css/nice-select.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
   </head>
   <body>
     <div class="preloader">
@@ -401,126 +404,113 @@
 
       <div class="booking-area">
         <div class="container">
-          <div class="booking-form">
-            <h4 class="booking-title">Reserve Your Chauffeur</h4>
-            <form action="#">
-              <div class="row">
-                <!-- Pick Up Location -->
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Pick-Up Location</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Enter Pick-Up Location"
-                    />
-                    <i class="far fa-location-dot"></i>
-                  </div>
-                </div>
-
-                <!-- Drop Off Location -->
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Drop-Off Location</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Enter Drop-Off Location"
-                    />
-                    <i class="far fa-location-dot"></i>
-                  </div>
-                </div>
-
-                <!-- Passengers -->
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Number of Passengers</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      placeholder="Number of Passengers"
-                      min="1"
-                    />
-                    <i class="far fa-user"></i>
-                  </div>
-                </div>
-
-                <!-- Vehicle Type -->
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Vehicle Type</label>
-                    <select class="select">
-                      <option value>Select Vehicle</option>
-                      <option value="1">Standard</option>
-                      <option value="2">Hybrid</option>
-                      <option value="3">Luxury</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Pick Up Date -->
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Pick-Up Date</label>
-                    <input
-                      type="text"
-                      class="form-control date-picker"
-                      placeholder="MM/DD/YYYY"
-                    />
-                    <i class="far fa-calendar-days"></i>
-                  </div>
-                </div>
-
-                <!-- Pick Up Time -->
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Pick-Up Time</label>
-                    <input
-                      type="text"
-                      class="form-control time-picker"
-                      placeholder="HH:MM AM/PM"
-                    />
-                    <i class="far fa-clock"></i>
-                  </div>
-                </div>
-
-                <!-- Driver Preference -->
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Driver Preference</label>
-                    <select class="select">
-                      <option value>No Preference</option>
-                      <option value="1">25+ Years Old</option>
-                      <option value="2">30+ Years Old</option>
-                      <option value="3">Experienced (35+)</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Specific Vehicle Model (Optional) -->
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Preferred Vehicle Model</label>
-                    <select class="select">
-                      <option value>No Preference</option>
-                      <option value="1">Mercedes E-Class</option>
-                      <option value="2">BMW 7 Series</option>
-                      <option value="3">Audi A8</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="col-lg-2 align-self-end">
-                  <button class="theme-btn" type="submit">
-                    Book Now<i class="fas fa-arrow-right"></i>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
+            <div class="booking-form">
+                <h4 class="booking-title">Reserve Your Chauffeur</h4>
+                <form id="bookingForm" method="POST" action="http://localhost:3000/api/bookings">
+                    <div class="row">
+                        <!-- Pick Up Location -->
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Pick-Up Location</label>
+                                <input type="text" class="form-control" name="pickup_location" placeholder="Enter Pick-Up Location" required />
+                            </div>
+                        </div>
+    
+                        <!-- Drop Off Location -->
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Drop-Off Location</label>
+                                <input type="text" class="form-control" name="dropoff_location" placeholder="Enter Drop-Off Location" required />
+                            </div>
+                        </div>
+    
+                        <!-- Passengers -->
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Number of Passengers</label>
+                                <input type="number" class="form-control" name="passengers" placeholder="Number of Passengers" min="1" required />
+                            </div>
+                        </div>
+    
+                        <!-- Vehicle Type -->
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Vehicle Type</label>
+                                <select class="select" name="vehicle_type" required>
+                                    <option value="Standard">Standard</option>
+                                    <option value="Hybrid">Hybrid</option>
+                                    <option value="Luxury">Luxury</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <!-- Pick Up Date -->
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Pick-Up Date</label>
+                                <input type="date" class="form-control" name="pickup_date" required />
+                            </div>
+                        </div>
+    
+                        <!-- Pick Up Time -->
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Pick-Up Time</label>
+                                <input type="time" class="form-control" name="pickup_time" required />
+                            </div>
+                        </div>
+    
+                        <!-- Driver Preference -->
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Driver Preference</label>
+                                <select class="select" name="driver_preference" required>
+                                    <option value="No Preference">No Preference</option>
+                                    <option value="25+ Years Old">25+ Years Old</option>
+                                    <option value="30+ Years Old">30+ Years Old</option>
+                                    <option value="Experienced (35+)">Experienced (35+)</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <!-- Specific Vehicle Model -->
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Preferred Vehicle Model</label>
+                                <select class="select" name="vehicle_model" required>
+                                    <option value="No Preference">No Preference</option>
+                                    <option value="Mercedes E-Class">Mercedes E-Class</option>
+                                    <option value="BMW 7 Series">BMW 7 Series</option>
+                                    <option value="Audi A8">Audi A8</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <!-- Submit Button -->
+                        <div class="col-lg-2 align-self-end">
+                            <button type="submit" class="theme-btn">Book Now<i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-      </div>
+    </div>
+    
+    <!-- Modal for Success Message -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <p id="messageText">Booking saved successfully.</p>
+        </div>
+    </div>
+    
+    <!-- Modal Styles -->
+
+    
+    <!-- Include jQuery for easier DOM manipulation -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
 
       <div class="about-area py-120">
         <div class="container">
@@ -2003,55 +1993,7 @@
         </div>
       </div>
 
-      <div class="download-area mb-120">
-        <div class="container">
-          <div class="download-wrapper">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="download-content">
-                  <div class="site-heading mb-4">
-                    <span class="site-title-tagline justify-content-start">
-                      <i class="flaticon-drive"></i> Get Our App
-                    </span>
-                    <h2 class="site-title mb-10">
-                      Download <span>Book Driver</span> App For Free
-                    </h2>
-                    <p>
-                      There are many variations of passages available, but the
-                      majority have suffered in some form, going to use a
-                      passage by injected humour.
-                    </p>
-                  </div>
-                  <div class="download-btn">
-                    <a href="#">
-                      <i class="fab fa-google-play"></i>
-                      <div class="download-btn-content">
-                        <span>Get It On</span>
-                        <strong>Google Play</strong>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <i class="fab fa-app-store"></i>
-                      <div class="download-btn-content">
-                        <span>Get It On</span>
-                        <strong>App Store</strong>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="download-img">
-                  <img
-                    src="https://via.placeholder.com/900x600"
-                    alt="Book Driver App Download Image"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </main>
 
     <footer class="footer-area">
@@ -2197,7 +2139,7 @@
               
               <ul class="footer-social">
                 <p class="copyright-text">
-                    Designed by <a href="https://thewebtrix.co.uk/" style="color: crimson;">The Web Trix</a>
+                    Designed by <a href="https://thewebtrix.co.uk/" style="color: crimson;"  target="_blank" >The Web Trix</a>
                  </p>
                 <li>
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -2220,6 +2162,9 @@
 
     <a href="#" id="scroll-top"><i class="far fa-arrow-up"></i></a>
 
+
+        <!-- Include Toastify JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Toastify/1.12.0/Toastify.min.js"></script>
     <script
       data-cfasync="false"
       src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
