@@ -4216,6 +4216,7 @@ body.rtl-mode .price-wrapper {
   top: 0;
   height: 100%;
   opacity: 0.1;
+  object-fit: contain;
 }
 .home-3 .hero-single::before {
   display: none;
