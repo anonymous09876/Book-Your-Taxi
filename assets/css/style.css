@@ -10,7 +10,7 @@
   --color-green: #11b76b;
   --color-blue: #0049d0;
   --color-yellow: #1eacc7;
-  --hero-overlay-color: #01060f;
+  --hero-overlay-color: #01060f79;
   --slider-arrow-bg: rgba(255, 255, 255, 0.2);
   --box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
   --box-shadow2: 0 0 15px rgba(0, 0, 0, 0.17);
@@ -4314,3 +4314,89 @@ body.rtl-mode .price-wrapper {
     text-decoration: none;
     cursor: pointer;
 }
+
+
+        /* Simple styling for the toggle buttons and page */
+        .flag-toggle {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+      }
+
+      .flag-btn {
+          width: 40px;
+          height: 40px;
+          border: none;
+          margin: 0 10px;
+          cursor: pointer;
+          border-radius: 5px;
+      }
+
+      .content {
+          text-align: center;
+          margin-top: 50px;
+          font-size: 20px;
+      }
+
+      .language-button {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 20px;
+      }
+
+
+
+
+
+      
+
+      .header-top-link {
+        margin-top: 10px;
+        text-align: right;
+    }
+
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-item {
+        list-style: none;
+        margin: 0 10px;
+    }
+
+    .nav-link {
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        padding: 10px;
+        z-index: 9999 !important;
+       
+    }
+
+    .nav-item:hover .dropdown-menu {
+        display: block;
+        z-index: 9999 !important;
+        
+    }
+
+    .dropdown-item {
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .flag-img {
+        width: 20px;
+        margin-right: 5px;
+    }

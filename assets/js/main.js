@@ -211,6 +211,20 @@
 })(jQuery);
 
 
+function switchLanguage(language) {
+  const googleTranslateElement = new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,de',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+  }, 'google_translate_element');
+
+  googleTranslateElement.showBanner(language);
+}
+
+
+
+
 
 // tostify .....................
 
