@@ -129,7 +129,7 @@
                 <a class="nav-link" href="#">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Order Online</a>
+                <a class="nav-link" href="./order.html">Order Online</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Pricing</a>
@@ -154,7 +154,7 @@
                 </button>
               </div>
               <div class="nav-right-btn mt-2">
-                <a href="#" class="theme-btn"><span class="fas fa-taxi"></span>Book A Taxi</a>
+                <a href="./order.html" class="theme-btn"><span class="fas fa-taxi"></span>Book A Taxi</a>
               </div>
               <div class="sidebar-btn">
                 <button type="button" class="nav-right-link">
@@ -190,7 +190,8 @@
 
         <!-- Logo Section -->
         <div class="sidebar-logo">
-          <img src="assets/img/logo/logo.png" alt="Book Your Driver Logo" />
+          <!-- <img src="assets/img/logo/logo.png" alt="logo"> -->
+          <h1><span style="color: #1eacc7">Book</span> Driver</h1>
         </div>
 
         <!-- About Us Section -->
@@ -244,11 +245,11 @@
               <div class="col-md-12 col-lg-9 mx-auto">
                 <div class="hero-content text-center">
                   <div class="hero-btn justify-content-center">
-                    <a href="#" class="theme-btn">
+                    <a href="./order.html" class="theme-btn">
                       <i class="fas fa-plane"></i>
                       From the Airport<i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#" class="theme-btn theme-btn2">
+                    <a href="./order.html" class="theme-btn theme-btn2">
                       <i class="fas fa-plane"></i>
                       To the Airport<i class="fas fa-arrow-right"></i>
                     </a>
@@ -266,11 +267,11 @@
               <div class="col-md-12 col-lg-9 mx-auto">
                 <div class="hero-content text-center">
                   <div class="hero-btn justify-content-center">
-                    <a href="#" class="theme-btn">
+                    <a href="./order.html" class="theme-btn">
                       <i class="fas fa-plane"></i>
                       From the Airport<i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#" class="theme-btn theme-btn2">
+                    <a href="./order.html" class="theme-btn theme-btn2">
                       <i class="fas fa-plane"></i>
                       To the Airport<i class="fas fa-arrow-right"></i>
                     </a>
@@ -288,11 +289,11 @@
               <div class="col-md-12 col-lg-9 mx-auto">
                 <div class="hero-content text-center">
                   <div class="hero-btn justify-content-center">
-                    <a href="#" class="theme-btn">
+                    <a href="./order.html" class="theme-btn">
                       <i class="fas fa-plane"></i>
                       From the Airport<i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#" class="theme-btn theme-btn2">
+                    <a href="./order.html" class="theme-btn theme-btn2">
                       <i class="fas fa-plane"></i>
                       To the Airport<i class="fas fa-arrow-right"></i>
                     </a>
@@ -309,35 +310,32 @@
       <div class="container">
         <div class="booking-form">
           <h4 class="booking-title">Reserve Your Chauffeur</h4>
-          <form id="bookingForm" method="POST" action="http://localhost:3000/api/bookings">
+          <form id="bookingForm" method="POST" action="http://localhost:5050/api/bookings">
             <div class="row">
               <!-- Pick Up Location -->
               <div class="col-lg-3">
                 <div class="form-group">
                   <label>Pick-Up Location</label>
-                  <input type="text" class="form-control" name="pickup_location" placeholder="Enter Pick-Up Location"
-                    required />
+                  <input type="text" class="form-control" name="pickup_location" placeholder="Enter Pick-Up Location" required />
                 </div>
               </div>
-
+    
               <!-- Drop Off Location -->
               <div class="col-lg-3">
                 <div class="form-group">
                   <label>Drop-Off Location</label>
-                  <input type="text" class="form-control" name="dropoff_location" placeholder="Enter Drop-Off Location"
-                    required />
+                  <input type="text" class="form-control" name="dropoff_location" placeholder="Enter Drop-Off Location" required />
                 </div>
               </div>
-
+    
               <!-- Passengers -->
               <div class="col-lg-3">
                 <div class="form-group">
                   <label>Number of Passengers</label>
-                  <input type="number" class="form-control" name="passengers" placeholder="Number of Passengers" min="1"
-                    required />
+                  <input type="number" class="form-control" name="passengers" placeholder="Number of Passengers" min="1" required />
                 </div>
               </div>
-
+    
               <!-- Vehicle Type -->
               <div class="col-lg-3">
                 <div class="form-group">
@@ -349,7 +347,7 @@
                   </select>
                 </div>
               </div>
-
+    
               <!-- Pick Up Date -->
               <div class="col-lg-3">
                 <div class="form-group">
@@ -357,7 +355,7 @@
                   <input type="date" class="form-control" name="pickup_date" required />
                 </div>
               </div>
-
+    
               <!-- Pick Up Time -->
               <div class="col-lg-3">
                 <div class="form-group">
@@ -365,10 +363,7 @@
                   <input type="time" class="form-control" name="pickup_time" required />
                 </div>
               </div>
-
-              <!-- Driver Preference -->
-
-
+    
               <!-- Specific Vehicle Model -->
               <div class="col-lg-3">
                 <div class="form-group">
@@ -381,7 +376,7 @@
                   </select>
                 </div>
               </div>
-
+    
               <!-- Submit Button -->
               <div class="col-lg-2 align-self-end">
                 <button type="submit" class="theme-btn">
@@ -393,6 +388,7 @@
         </div>
       </div>
     </div>
+    
 
     <!-- Modal for Success Message -->
     <div id="successModal" class="modal">

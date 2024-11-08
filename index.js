@@ -33,9 +33,9 @@ db.connect((err) => {
 
 // Route to handle booking data from the form (POST request)
 app.post('/api/bookings', (req, res) => {
-    const { pickup_location, dropoff_location, passengers, vehicle_type, pickup_date, pickup_time, driver_preference, vehicle_model } = req.body;
+    const { pickup_location, dropoff_location, passengers, vehicle_type, pickup_date, pickup_time, vehicle_model } = req.body;
 
-    if (!pickup_location || !dropoff_location || !passengers || !vehicle_type || !pickup_date || !pickup_time || !driver_preference || !vehicle_model) {
+    if (!pickup_location || !dropoff_location || !passengers || !vehicle_type || !pickup_date || !pickup_time || !vehicle_model) {
         return res.status(400).json({ message: 'All fields are required.' });
     }
 
@@ -59,10 +59,10 @@ app.post('/api/bookings', (req, res) => {
         }
 
         const insertQuery = `
-            INSERT INTO bookings (pickup_location, dropoff_location, passengers, vehicle_type, pickup_date, pickup_time, driver_preference, vehicle_model)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO bookings (pickup_location, dropoff_location, passengers, vehicle_type, pickup_date, pickup_time, vehicle_model)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
         `;
-        const insertValues = [pickup_location, dropoff_location, passengers, vehicle_type, pickup_date, pickup_time, driver_preference, vehicle_model];
+        const insertValues = [pickup_location, dropoff_location, passengers, vehicle_type, pickup_date, pickup_time, vehicle_model];
 
         db.query(insertQuery, insertValues, (err, result) => {
             if (err) {

@@ -211,6 +211,9 @@
 })(jQuery);
 
 
+
+
+
 function switchLanguage(language) {
   const googleTranslateElement = new google.translate.TranslateElement({
       pageLanguage: 'en',
