@@ -1163,7 +1163,7 @@ label {
 .hero-single .hero-content .hero-btn {
   gap: 1rem;
   display: flex;
-  margin-top: 35px;
+  margin-top: 195px;
   justify-content: start;
 }
 .hero-slider.owl-theme .owl-nav {
@@ -4216,7 +4216,7 @@ body.rtl-mode .price-wrapper {
   top: 0;
   height: 100%;
   opacity: 0.1;
-  object-fit: contain;
+  object-fit: cover;
 }
 .home-3 .hero-single::before {
   display: none;
