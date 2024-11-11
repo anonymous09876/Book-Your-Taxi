@@ -277,3 +277,132 @@ function switchLanguage(language) {
     }
   });
 })(jQuery);
+
+
+
+
+
+// City distance data (in kilometers)
+const cityDistances = {
+  'Berlin-Hamburg': 289,
+  'Berlin-Munich': 585,
+  'Berlin-Cologne': 571,
+  'Berlin-Frankfurt am Main': 545,
+  'Hamburg-Munich': 774,
+  'Hamburg-Cologne': 360,
+  'Hamburg-Frankfurt am Main': 492,
+  'Munich-Cologne': 574,
+  'Munich-Frankfurt am Main': 394,
+  'Cologne-Frankfurt am Main': 191,
+  'Berlin-Stuttgart': 582,
+  'Berlin-Düsseldorf': 535,
+  'Hamburg-Stuttgart': 681,
+  'Hamburg-Düsseldorf': 415,
+  'Munich-Stuttgart': 220,
+  'Munich-Düsseldorf': 600,
+  'Cologne-Stuttgart': 250,
+  'Cologne-Düsseldorf': 30,
+  'Frankfurt am Main-Stuttgart': 220,
+  'Frankfurt am Main-Düsseldorf': 190,
+  // Add more cities as needed
+};
+
+// Define a basic pricing model
+const basePricePerKm = 2; // Price per kilometer
+const vehicleTypeMultiplier = {
+  "Standard": 1,
+  "Hybrid": 1.2,
+  "Luxury": 1.5
+};
+
+// Define additional multipliers for preferred vehicle models
+const vehicleModelMultiplier = {
+  "No Preference": 1,
+  "Mercedes E-Class": 1.3,
+  "BMW 7 Series": 1.4,
+  "Audi A8": 1.5
+};
+
+// Update price function
+function updatePrice() {
+  const pickupLocation = document.getElementById("pickup_location").value;
+  const dropoffLocation = document.getElementById("dropoff_location").value;
+  const passengers = document.getElementById("passengers").value;
+  const vehicleType = document.getElementById("vehicle_type").value;
+  const vehicleModel = document.getElementById("vehicle_model").value;
+
+  if (pickupLocation && dropoffLocation) {
+    // Create the key for city pair (e.g., 'Berlin-Hamburg')
+    const cityKey = `${pickupLocation}-${dropoffLocation}`;
+    const reverseCityKey = `${dropoffLocation}-${pickupLocation}`;
+
+    // Check if the distance exists in the cityDistances object
+    let distance = cityDistances[cityKey] || cityDistances[reverseCityKey];
+
+    if (distance) {
+      let price = distance * basePricePerKm; // Calculate the price based on distance
+      price *= vehicleTypeMultiplier[vehicleType]; // Apply vehicle type multiplier
+      price *= vehicleModelMultiplier[vehicleModel]; // Apply vehicle model multiplier
+
+      // Add extra cost based on the number of passengers (optional)
+      if (passengers > 4) {
+        price += (passengers - 4) * 5; // For example, $5 extra for each passenger above 4
+      }
+
+      // Display the estimated price
+      document.getElementById("estimated_price").value = `€${price.toFixed(2)}`;
+
+      // Save the booking data
+      saveBookingData(pickupLocation, dropoffLocation, passengers, vehicleType, vehicleModel, price);
+    }
+  }
+}
+
+// Save booking data to the database
+function saveBookingData(pickupLocation, dropoffLocation, passengers, vehicleType, vehicleModel, price) {
+  const pickupDate = document.getElementById("pickup_date").value;
+  const pickupTime = document.getElementById("pickup_time").value;
+
+  // Prepare the booking data
+  const bookingData = {
+    pickup_location: pickupLocation,
+    dropoff_location: dropoffLocation,
+    passengers: passengers,
+    vehicle_type: vehicleType,
+    vehicle_model: vehicleModel,
+    pickup_date: pickupDate,
+    pickup_time: pickupTime,
+    price: price
+  };
+
+  // Send the data to the server via POST request
+  fetch('http://localhost:5050/api/bookings', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(bookingData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data === "Booking saved successfully") {
+      alert("Booking has been successfully saved!");
+    } else {
+      alert("There was an error saving the booking.");
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert("An error occurred. Please try again later.");
+  });
+}
+
+// Attach event listeners to fields that affect pricing
+document.getElementById("pickup_location").addEventListener("change", updatePrice);
+document.getElementById("dropoff_location").addEventListener("change", updatePrice);
+document.getElementById("passengers").addEventListener("input", updatePrice);
+document.getElementById("vehicle_type").addEventListener("change", updatePrice);
+document.getElementById("vehicle_model").addEventListener("change", updatePrice);
+
+// Trigger the price update function when the page loads
+window.addEventListener("load", updatePrice);

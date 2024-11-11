@@ -244,81 +244,81 @@
 
 
 
-<!-- Bookings -->
+
+
 
 <div class="col-lg-9">
-    <div class="user-profile-wrapper">
-        <div class="row">
-            <!-- Dashboard Widgets -->
-            <div class="col-md-6 col-lg-4">
-                <div class="dashboard-widget dashboard-widget-color-1">
-                    <div class="dashboard-widget-info">
-                        <h1 id="upcoming-bookings-count">05</h1>
-                        <span>Upcoming Bookings</span>
-                    </div>
-                    <div class="dashboard-widget-icon">
-                        <i class="fal fa-list"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="dashboard-widget dashboard-widget-color-2">
-                    <div class="dashboard-widget-info">
-                        <h1 id="total-bookings-count">1250</h1>
-                        <span>Total Bookings</span>
-                    </div>
-                    <div class="dashboard-widget-icon">
-                        <i class="fal fa-eye"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="dashboard-widget dashboard-widget-color-3">
-                    <div class="dashboard-widget-info">
-                        <h1 id="cancelled-bookings-count">110</h1>
-                        <span>Cancelled Bookings</span>
-                    </div>
-                    <div class="dashboard-widget-icon">
-                        <i class="fal fa-xmark-circle"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Upcoming Bookings Table -->
-            <div class="col-lg-12">
-                <div class="user-profile-card">
-                    <h4 class="user-profile-card-title">Upcoming Bookings</h4>
-                    <div class="table-responsive">
-                        <table class="table text-nowrap" id="bookings-table">
-                            <thead>
-                                <tr>
-                                    <th>Booking ID</th>
-                                    <th>Pickup Location</th>
-                                    <th>Drop-off Location</th>
-                                    <th>Passengers</th>
-                                    <th>Vehicle Type</th>
-                                    <th>Pickup Date & Time</th>
-                                    <th>Vehicle Model</th>
-                                    <th>Driver Preference</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody id="bookings-tbody">
-                                <!-- Data will be injected dynamically -->
-                            </tbody>
-                        </table>
-                        <!-- See More Button -->
-                        <div class="text-center p-2">
-                            <button id="see-more-btn" class="btn btn-primary" onclick="loadMoreBookings()">See More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="user-profile-wrapper">
+      <div class="row">
+          <!-- Dashboard Widgets -->
+          <div class="col-md-6 col-lg-4">
+              <div class="dashboard-widget dashboard-widget-color-1">
+                  <div class="dashboard-widget-info">
+                      <h1 id="upcoming-bookings-count">05</h1>
+                      <span>Upcoming Bookings</span>
+                  </div>
+                  <div class="dashboard-widget-icon">
+                      <i class="fal fa-list"></i>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+              <div class="dashboard-widget dashboard-widget-color-2">
+                  <div class="dashboard-widget-info">
+                      <h1 id="total-bookings-count">1250</h1>
+                      <span>Total Bookings</span>
+                  </div>
+                  <div class="dashboard-widget-icon">
+                      <i class="fal fa-eye"></i>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+              <div class="dashboard-widget dashboard-widget-color-3">
+                  <div class="dashboard-widget-info">
+                      <h1 id="cancelled-bookings-count">110</h1>
+                      <span>Cancelled Bookings</span>
+                  </div>
+                  <div class="dashboard-widget-icon">
+                      <i class="fal fa-xmark-circle"></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <!-- Upcoming Bookings Table -->
+          <div class="col-lg-12">
+              <div class="user-profile-card">
+                  <h4 class="user-profile-card-title">Upcoming Bookings</h4>
+                  <div class="table-responsive">
+                      <table class="table text-nowrap" id="bookings-table">
+                          <thead>
+                              <tr>
+                                  <th>Booking ID</th>
+                                  <th>Pickup Location</th>
+                                  <th>Drop-off Location</th>
+                                  <th>Passengers</th>
+                                  <th>Vehicle Type</th>
+                                  <th>Pickup Date & Time</th>
+                                  <th>Vehicle Model</th>
+                                  <th>Price</th>
+                                  <th>Status</th>
+                              </tr>
+                          </thead>
+                          <tbody id="bookings-tbody">
+                              <!-- Data will be injected dynamically -->
+                          </tbody>
+                      </table>
+                      <!-- See More Button -->
+                      <div class="text-center p-2">
+                          <button id="see-more-btn" class="btn btn-primary" onclick="loadMoreBookings()">See More</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
-
 
 
 </div>
@@ -333,9 +333,10 @@
 <div class="row footer-widget-wrapper pt-120 pb-70">
 <div class="col-md-6 col-lg-4">
 <div class="footer-widget-box about-us">
-<a href="#" class="footer-logo">
-<img src="assets/img/logo/logo-light.png" alt>
-</a>
+  <a class="navbar-brand" href="#">
+    <!-- <img src="assets/img/logo/logo.png" alt="logo"> -->
+    <h1 style="color: white;"><span style="color: #1eacc7">Book</span> Driver</h1>
+  </a>
 <p class="mb-3">
 We are many variations of passages available but the majority have suffered alteration
 in some form by injected humour words believable.
@@ -416,64 +417,64 @@ Subscribe Now <i class="far fa-paper-plane"></i>
 
 <a href="#" id="scroll-top"><i class="far fa-arrow-up"></i></a>
 
-
 <script>
-    let currentIndex = 0;  // Track the index of the next row to display
-    const recordsPerPage = 5;  // Number of records to show at a time
-    let allBookings = [];  // Store all bookings data
+  let currentIndex = 0;  // Track the index of the next row to display
+  const recordsPerPage = 5;  // Number of records to show at a time
+  let allBookings = [];  // Store all bookings data
 
-    window.onload = function() {
-        fetch('http://localhost:3000/api/bookings')  // Adjust URL to your API endpoint
-            .then(response => response.json())  // Parse JSON response
-            .then(bookings => {
-                console.log('Bookings data:', bookings);  // Log the fetched data for debugging
+  window.onload = function() {
+      fetch('http://localhost:5050/api/bookings')  // Fetch data from the backend
+          .then(response => response.json())  // Parse JSON response
+          .then(bookings => {
+              console.log('Bookings data:', bookings);  // Log the fetched data for debugging
 
-                allBookings = bookings;
-                const upcomingBookings = bookings.filter(booking => booking.status === 'upcoming');
-                const cancelledBookings = bookings.filter(booking => booking.status === 'cancelled');
+              allBookings = bookings;
+              const upcomingBookings = bookings.filter(booking => booking.status === 'upcoming');
+              const cancelledBookings = bookings.filter(booking => booking.status === 'cancelled');
 
-                // Update dashboard widgets with the counts
-                document.getElementById('upcoming-bookings-count').textContent = upcomingBookings.length;
-                document.getElementById('total-bookings-count').textContent = bookings.length;
-                document.getElementById('cancelled-bookings-count').textContent = cancelledBookings.length;
+              // Update dashboard widgets with the counts
+              document.getElementById('upcoming-bookings-count').textContent = upcomingBookings.length;
+              document.getElementById('total-bookings-count').textContent = bookings.length;
+              document.getElementById('cancelled-bookings-count').textContent = cancelledBookings.length;
 
-                // Initially load the first 5 bookings
-                loadMoreBookings();
-            })
-            .catch(error => {
-                console.error('Error fetching bookings:', error);
-            });
-    };
+              // Initially load the first 5 bookings
+              loadMoreBookings();
+          })
+          .catch(error => {
+              console.error('Error fetching bookings:', error);
+          });
+  };
 
-    // Function to load the next 5 bookings
-    function loadMoreBookings() {
-        // Get the next chunk of bookings
-        const bookingsToDisplay = allBookings.slice(currentIndex, currentIndex + recordsPerPage);
+  // Function to load the next 5 bookings
+  function loadMoreBookings() {
+      // Get the next chunk of bookings
+      const bookingsToDisplay = allBookings.slice(currentIndex, currentIndex + recordsPerPage);
 
-        // Insert each booking into the table
-        const bookingsTbody = document.getElementById('bookings-tbody');
-        bookingsToDisplay.forEach(booking => {
-            const row = bookingsTbody.insertRow();
-            row.innerHTML = `
-                <td>${booking.id}</td>
-                <td>${booking.pickup_location}</td>
-                <td>${booking.dropoff_location}</td>
-                <td>${booking.passengers}</td>
-                <td>${booking.vehicle_type}</td>
-                <td>${booking.pickup_date} ${booking.pickup_time}</td>
-                <td>${booking.vehicle_model}</td>
-                <td><span class="badge badge-primary">${booking.status}</span></td>
-            `;
-        });
+      // Insert each booking into the table
+      const bookingsTbody = document.getElementById('bookings-tbody');
+      bookingsToDisplay.forEach(booking => {
+          const row = bookingsTbody.insertRow();
+          row.innerHTML = `
+              <td>${booking.id}</td>
+              <td>${booking.pickup_location}</td>
+              <td>${booking.dropoff_location}</td>
+              <td>${booking.passengers}</td>
+              <td>${booking.vehicle_type}</td>
+              <td>${booking.pickup_date} ${booking.pickup_time}</td>
+              <td>${booking.vehicle_model}</td>
+              <td>$${booking.price}</td> <!-- Added Price Data -->
+              <td><span class="badge ${booking.status === 'upcoming' ? 'badge-success' : 'badge-danger'}">${booking.status}</span></td>
+          `;
+      });
 
-        // Update the index for the next set of bookings
-        currentIndex += recordsPerPage;
+      // Update the index for the next set of bookings
+      currentIndex += recordsPerPage;
 
-        // Hide the "See More" button if all bookings are displayed
-        if (currentIndex >= allBookings.length) {
-            document.getElementById('see-more-btn').style.display = 'none';
-        }
-    }
+      // Hide the "See More" button if all bookings are displayed
+      if (currentIndex >= allBookings.length) {
+          document.getElementById('see-more-btn').style.display = 'none';
+      }
+  }
 </script>
 
 

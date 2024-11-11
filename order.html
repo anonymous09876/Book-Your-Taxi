@@ -250,7 +250,7 @@
         </div>
       </div>
 
-      <div class="booking-area" id="booking-area">
+      <div class="booking-area">
         <div class="container">
           <div class="booking-form">
             <h4 class="booking-title">Reserve Your Chauffeur</h4>
@@ -260,7 +260,17 @@
                 <div class="col-lg-3">
                   <div class="form-group">
                     <label>Pick-Up Location</label>
-                    <input type="text" class="form-control" name="pickup_location" placeholder="Enter Pick-Up Location" required />
+                    <select class="form-control" name="pickup_location" id="pickup_location" required>
+                      <option value="">Select Pick-Up Location</option>
+                      <!-- German Cities Dropdown -->
+                      <option value="Berlin">Berlin</option>
+                      <option value="Munich">Munich</option>
+                      <option value="Hamburg">Hamburg</option>
+                      <option value="Frankfurt">Frankfurt</option>
+                      <option value="Cologne">Cologne</option>
+                      <option value="Stuttgart">Stuttgart</option>
+                      <!-- Add more cities as needed -->
+                    </select>
                   </div>
                 </div>
       
@@ -268,7 +278,17 @@
                 <div class="col-lg-3">
                   <div class="form-group">
                     <label>Drop-Off Location</label>
-                    <input type="text" class="form-control" name="dropoff_location" placeholder="Enter Drop-Off Location" required />
+                    <select class="form-control" name="dropoff_location" id="dropoff_location" required>
+                      <option value="">Select Drop-Off Location</option>
+                      <!-- German Cities Dropdown -->
+                      <option value="Berlin">Berlin</option>
+                      <option value="Munich">Munich</option>
+                      <option value="Hamburg">Hamburg</option>
+                      <option value="Frankfurt">Frankfurt</option>
+                      <option value="Cologne">Cologne</option>
+                      <option value="Stuttgart">Stuttgart</option>
+                      <!-- Add more cities as needed -->
+                    </select>
                   </div>
                 </div>
       
@@ -276,7 +296,7 @@
                 <div class="col-lg-3">
                   <div class="form-group">
                     <label>Number of Passengers</label>
-                    <input type="number" class="form-control" name="passengers" placeholder="Number of Passengers" min="1" required />
+                    <input type="number" class="form-control" name="passengers" id="passengers" placeholder="Number of Passengers" min="1" required />
                   </div>
                 </div>
       
@@ -284,7 +304,7 @@
                 <div class="col-lg-3">
                   <div class="form-group">
                     <label>Vehicle Type</label>
-                    <select class="select" name="vehicle_type" required>
+                    <select class="select" name="vehicle_type" id="vehicle_type" required>
                       <option value="Standard">Standard</option>
                       <option value="Hybrid">Hybrid</option>
                       <option value="Luxury">Luxury</option>
@@ -312,12 +332,20 @@
                 <div class="col-lg-3">
                   <div class="form-group">
                     <label>Preferred Vehicle Model</label>
-                    <select class="select" name="vehicle_model" required>
+                    <select class="select" name="vehicle_model" id="vehicle_model" required>
                       <option value="No Preference">No Preference</option>
                       <option value="Mercedes E-Class">Mercedes E-Class</option>
                       <option value="BMW 7 Series">BMW 7 Series</option>
                       <option value="Audi A8">Audi A8</option>
                     </select>
+                  </div>
+                </div>
+      
+                <!-- Price Section -->
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <label>Estimated Price</label>
+                    <input type="text" class="form-control" id="estimated_price" disabled />
                   </div>
                 </div>
       
@@ -332,6 +360,7 @@
           </div>
         </div>
       </div>
+      
 
 
     </main>

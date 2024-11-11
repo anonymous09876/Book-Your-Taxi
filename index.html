@@ -139,10 +139,6 @@
               </li>
 
               <li class="nav-item">
-                <!-- <a class="nav-link" href="#">Terms & Conditions</a> -->
-              </li>
-
-              <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
               </li>
             </ul>
@@ -239,7 +235,7 @@
     <div class="hero-section">
       <div class="hero-slider owl-carousel owl-theme">
         <!-- Slide 1 -->
-        <div class="hero-single" style="background: url(https://cdn.pixabay.com/photo/2019/08/10/12/03/vienna-4396758_960_720.jpg)">
+        <div class="hero-single" style="background: url(./assets/img/slider/slider-1.jpg)">
           <div class="container">
             <div class="row align-items-center">
               <div class="col-md-12 col-lg-9 mx-auto">
@@ -261,7 +257,7 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="hero-single" style="background: url(https://cdn.pixabay.com/photo/2013/12/15/17/17/vienna-228943_960_720.jpg)">
+        <div class="hero-single" style="background: url(./assets/img/slider/slider-2.jpg)">
           <div class="container">
             <div class="row align-items-center">
               <div class="col-md-12 col-lg-9 mx-auto">
@@ -283,7 +279,7 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class="hero-single" style="background: url(https://cdn.pixabay.com/photo/2018/01/19/17/32/city-3092900_960_720.jpg)">
+        <div class="hero-single" style="background: url(./assets/img/slider/slider-3.jpg)">
           <div class="container">
             <div class="row align-items-center">
               <div class="col-md-12 col-lg-9 mx-auto">
@@ -316,7 +312,17 @@
               <div class="col-lg-3">
                 <div class="form-group">
                   <label>Pick-Up Location</label>
-                  <input type="text" class="form-control" name="pickup_location" placeholder="Enter Pick-Up Location" required />
+                  <select class="form-control" name="pickup_location" id="pickup_location" required>
+                    <option value="">Select Pick-Up Location</option>
+                    <!-- German Cities Dropdown -->
+                    <option value="Berlin">Berlin</option>
+                    <option value="Munich">Munich</option>
+                    <option value="Hamburg">Hamburg</option>
+                    <option value="Frankfurt">Frankfurt</option>
+                    <option value="Cologne">Cologne</option>
+                    <option value="Stuttgart">Stuttgart</option>
+                    <!-- Add more cities as needed -->
+                  </select>
                 </div>
               </div>
     
@@ -324,7 +330,17 @@
               <div class="col-lg-3">
                 <div class="form-group">
                   <label>Drop-Off Location</label>
-                  <input type="text" class="form-control" name="dropoff_location" placeholder="Enter Drop-Off Location" required />
+                  <select class="form-control" name="dropoff_location" id="dropoff_location" required>
+                    <option value="">Select Drop-Off Location</option>
+                    <!-- German Cities Dropdown -->
+                    <option value="Berlin">Berlin</option>
+                    <option value="Munich">Munich</option>
+                    <option value="Hamburg">Hamburg</option>
+                    <option value="Frankfurt">Frankfurt</option>
+                    <option value="Cologne">Cologne</option>
+                    <option value="Stuttgart">Stuttgart</option>
+                    <!-- Add more cities as needed -->
+                  </select>
                 </div>
               </div>
     
@@ -332,7 +348,7 @@
               <div class="col-lg-3">
                 <div class="form-group">
                   <label>Number of Passengers</label>
-                  <input type="number" class="form-control" name="passengers" placeholder="Number of Passengers" min="1" required />
+                  <input type="number" class="form-control" name="passengers" id="passengers" placeholder="Number of Passengers" min="1" required />
                 </div>
               </div>
     
@@ -340,7 +356,7 @@
               <div class="col-lg-3">
                 <div class="form-group">
                   <label>Vehicle Type</label>
-                  <select class="select" name="vehicle_type" required>
+                  <select class="select" name="vehicle_type" id="vehicle_type" required>
                     <option value="Standard">Standard</option>
                     <option value="Hybrid">Hybrid</option>
                     <option value="Luxury">Luxury</option>
@@ -368,12 +384,20 @@
               <div class="col-lg-3">
                 <div class="form-group">
                   <label>Preferred Vehicle Model</label>
-                  <select class="select" name="vehicle_model" required>
+                  <select class="select" name="vehicle_model" id="vehicle_model" required>
                     <option value="No Preference">No Preference</option>
                     <option value="Mercedes E-Class">Mercedes E-Class</option>
                     <option value="BMW 7 Series">BMW 7 Series</option>
                     <option value="Audi A8">Audi A8</option>
                   </select>
+                </div>
+              </div>
+    
+              <!-- Price Section -->
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <label>Estimated Price</label>
+                  <input type="text" class="form-control" id="estimated_price" disabled />
                 </div>
               </div>
     
@@ -388,6 +412,7 @@
         </div>
       </div>
     </div>
+    
     
 
     <!-- Modal for Success Message -->
