@@ -145,197 +145,168 @@
   
 <!-- Booking Form -->
 <div class="booking-area">
-    <div class="container">
+  <div class="container">
       <div class="booking-form">
-        <h4 class="booking-title">Reserve Your Chauffeur</h4>
-        <form id="bookingForm" method="POST" action="http://localhost:5050/api/bookings">
-          <div class="row">
-            <!-- Pick-Up Date -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Pick-Up Date</label>
-                <input type="date" class="form-control" name="pickup_date" required />
-              </div>
-            </div>
-            
-            <!-- Pick-Up Time -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Pick-Up Time</label>
-                <input type="time" class="form-control" name="pickup_time" required />
-              </div>
-            </div>
-            
-            <!-- City -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>City</label>
-                <input type="text" class="form-control" name="city" placeholder="Enter city" required />
-              </div>
-            </div>
-            
-            <!-- Area Code -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Area Code</label>
-                <input type="text" class="form-control" name="area_code" placeholder="Enter area code" required />
-              </div>
-            </div>
-            
-            <!-- Title -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Title</label>
-                <select class="form-control" name="title" required>
-                  <option value="">Select Title</option>
-                  <option value="Mr.">Mr.</option>
-                  <option value="Mrs.">Mrs.</option>
-                  <option value="Ms.">Ms.</option>
-                  <option value="Dr.">Dr.</option>
-                  <option value="Ing.">Ing.</option>
-                </select>
-              </div>
-            </div>
-            
-            <!-- Name and Surname -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Name and Surname</label>
-                <input type="text" class="form-control" name="name" placeholder="Enter full name" required />
-              </div>
-            </div>
-            
-            <!-- Children -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Children</label>
-                <input type="number" class="form-control" name="children" placeholder="Enter number of children" min="0" />
-              </div>
-            </div>
-            
-            <!-- Type of Vehicle -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Type of Vehicle</label>
-                <select class="form-control" name="vehicle_type" required>
-                  <option value="Standard">Standard</option>
-                  <option value="Luxury">Luxury</option>
-                  <option value="Van">Van</option>
-                </select>
-              </div>
-            </div>
-            
-            <!-- Phone Number -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" class="form-control" name="phone_number" placeholder="Enter phone number" required />
-              </div>
-            </div>
-            
-            <!-- E-Mail Address -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>E-Mail Address</label>
-                <input type="email" class="form-control" name="email" placeholder="Enter email address" required />
-              </div>
-            </div>
-            
-            <!-- Street -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Street</label>
-                <input type="text" class="form-control" name="street" placeholder="Enter street" required />
-              </div>
-            </div>
-            
-            <!-- House Number -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>House Number</label>
-                <input type="text" class="form-control" name="house_no" placeholder="Enter house number" required />
-              </div>
-            </div>
-            
-            <!-- Number of Passengers -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Number of Passengers</label>
-                <input type="number" class="form-control" name="passengers" placeholder="Number of passengers" min="1" required />
-              </div>
-            </div>
-            
-            <!-- Return Journey -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Return Journey</label>
-                <select class="form-control" name="return_journey" required>
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-                </select>
-              </div>
-            </div>
-            
-            <!-- Luggage -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Luggage</label>
-                <select class="form-control" name="luggage" required>
-                  <option value="No Luggage">No Luggage</option>
-                  <option value="1-2 Suitcases">1-2 Suitcases</option>
-                  <option value="3-4 Suitcases">3-4 Suitcases</option>
-                  <option value="5+ Suitcases">5+ Suitcases</option>
-                </select>
-              </div>
-            </div>
-            
-            <!-- Number of Suitcases -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Number of Suitcases</label>
-                <input type="number" class="form-control" name="suitcases" placeholder="Number of suitcases" min="0" />
-              </div>
-            </div>
-            
-            <!-- Additional Address -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Additional Address</label>
-                <input type="text" class="form-control" name="additional_address" placeholder="Enter additional address" />
-              </div>
-            </div>
-            
-            <!-- Form of Payment -->
-            <div class="col-lg-3">
-              <div class="form-group">
-                <label>Form of Payment</label>
-                <select class="form-control" name="payment_method" required>
-                  <option value="Cash">Cash</option>
-                  <option value="Credit Card">Credit Card</option>
-                  <option value="Online Payment">Online Payment</option>
-                </select>
-              </div>
-            </div>
-            
-            <!-- Comment -->
-            <div class="col-lg-12">
-              <div class="form-group">
-                <label>Comment</label>
-                <textarea class="form-control" name="comment" rows="4" placeholder="Enter any additional comments"></textarea>
-              </div>
-            </div>
-            
-                <!-- Submit Button -->
-                <div class="col-lg-2 align-self-end mt-20">
-                    <button type="submit" class="theme-btn">
-                      Book Now<i class="fas fa-arrow-right"></i>
-                    </button>
+          <h4 class="booking-title">Airport Transfer Booking</h4>
+          <form id="bookingForm" method="POST" action="http://localhost:5050/api/bookings">
+              <div class="row">
+                  <!-- Pick-Up Date -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>Pick-Up Date</label>
+                          <input type="date" class="form-control" name="pickup_date" required />
+                      </div>
                   </div>
-          </div>
-        </form>
+
+                  <!-- Pick-Up Time -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>Pick-Up Time</label>
+                          <input type="time" class="form-control" name="pickup_time" required />
+                      </div>
+                  </div>
+
+                  <!-- Pick-Up City -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>Pick-Up City</label>
+                          <select class="form-control" name="pickup_city" required>
+                              <option value="">Select City</option>
+                              <option value="Vienna City Center">Vienna City Center</option>
+                              <option value="Schwechat">Schwechat</option>
+                              <option value="Linz">Linz</option>
+                              <option value="Salzburg">Salzburg</option>
+                              <option value="Graz">Graz</option>
+                          </select>
+                      </div>
+                  </div>
+
+                  <!-- Street -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>Street</label>
+                          <input type="text" class="form-control" name="street" required />
+                      </div>
+                  </div>
+
+                  <!-- House Number -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>House Number</label>
+                          <input type="text" class="form-control" name="house_no" required />
+                      </div>
+                  </div>
+
+                  <!-- Name -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>Full Name</label>
+                          <input type="text" class="form-control" name="name" required />
+                      </div>
+                  </div>
+
+                  <!-- Phone Number -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>Phone Number</label>
+                          <input type="tel" class="form-control" name="phone_number" required />
+                      </div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>Email</label>
+                          <input type="email" class="form-control" name="email" required />
+                      </div>
+                  </div>
+
+                  <!-- Number of Passengers -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>Number of Passengers</label>
+                          <input type="number" class="form-control" name="number_of_passengers" min="1" required />
+                      </div>
+                  </div>
+
+                  <!-- Number of Suitcases -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>Number of Suitcases</label>
+                          <input type="number" class="form-control" name="number_of_suitcases" min="0" required />
+                      </div>
+                  </div>
+
+                  <!-- Children Seat -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>Children Seat</label>
+                          <select class="form-control" name="children_seat" required>
+                              <option value="">Select Option</option>
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
+                          </select>
+                      </div>
+                  </div>
+
+                  <!-- Type of Vehicle -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>Type of Vehicle</label>
+                          <select class="form-control" name="vehicle_type" required>
+                              <option value="">Select Vehicle</option>
+                              <option value="Standard">Standard</option>
+                              <option value="Luxury">Luxury</option>
+                              <option value="Van">Van</option>
+                          </select>
+                      </div>
+                  </div>
+
+                  <!-- Form of Payment -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>Form of Payment</label>
+                          <select class="form-control" name="payment_method" required>
+                              <option value="">Select Payment</option>
+                              <option value="Cash">Cash</option>
+                              <option value="Credit Card">Credit Card</option>
+                              <option value="Online Payment">Online Payment</option>
+                          </select>
+                      </div>
+                  </div>
+
+                  <!-- Return Journey -->
+                  <div class="col-lg-3">
+                      <div class="form-group">
+                          <label>Return Journey</label>
+                          <select class="form-control" name="return_journey" required>
+                              <option value="">Select Option</option>
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
+                          </select>
+                      </div>
+                  </div>
+
+                  <!-- Comment -->
+                  <div class="col-lg-12">
+                      <div class="form-group">
+                          <label>Comment</label>
+                          <textarea class="form-control" name="comment" rows="4"></textarea>
+                      </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="col-lg-3 align-self-end mt-20">
+                      <button type="submit" class="theme-btn">
+                          Book Now <i class="fas fa-arrow-right"></i>
+                      </button>
+                  </div>
+              </div>
+          </form>
       </div>
-    </div>
   </div>
+</div>
+
   
 
     </div>
@@ -478,6 +449,11 @@
       </div>
     </div>
   </footer>
+
+
+  <!-- Add this before </body> -->
+<script src="./assets/js/bookings/booking-form.js"></script>
+
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/jquery.min.js"></script>
