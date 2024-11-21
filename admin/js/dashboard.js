@@ -1,38 +1,39 @@
-// Authentication check
+// Check authentication
 if (!localStorage.getItem('adminLoggedIn')) {
     window.location.href = 'login.html';
 }
 
-// Global state
+// Global variables
 let bookingsData = [];
 let currentPage = 1;
 const itemsPerPage = 10;
 
-// Sidebar Toggle Functions
-function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const mainContent = document.getElementById('mainContent');
-    sidebar.classList.toggle('collapsed');
-    mainContent.classList.toggle('expanded');
-}
+// Initialize dashboard
+document.addEventListener('DOMContentLoaded', function() {
+    fetchBookings();
+    setInterval(fetchBookings, 30000);
+    setupEventListeners();
+});
 
 // Event Listeners
-document.getElementById('sidebarToggle').addEventListener('click', toggleSidebar);
-document.getElementById('sidebarCloseBtn').addEventListener('click', toggleSidebar);
+function setupEventListeners() {
+    // Sidebar controls
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarClose = document.getElementById('sidebarCloseBtn');
+    if (sidebarToggle) sidebarToggle.addEventListener('click', toggleSidebar);
+    if (sidebarClose) sidebarClose.addEventListener('click', toggleSidebar);
 
-window.addEventListener('resize', () => {
-    const sidebar = document.getElementById('sidebar');
-    const mainContent = document.getElementById('mainContent');
-    if (window.innerWidth <= 768) {
-        sidebar.classList.add('collapsed');
-        mainContent.classList.add('expanded');
-    }
-});
+    // Logout buttons
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) logoutBtn.addEventListener('click', () => {
+        localStorage.clear();
+        window.location.href = 'login.html';
+    });
 
-document.getElementById('logoutBtn').addEventListener('click', () => {
-    localStorage.removeItem('adminLoggedIn');
-    window.location.href = 'login.html';
-});
+    // Window resize
+    window.addEventListener('resize', checkScreenSize);
+    checkScreenSize();
+}
 
 // API Functions
 async function fetchBookings() {
@@ -42,6 +43,7 @@ async function fetchBookings() {
         bookingsData = data.data;
         updateDashboard();
     } catch (error) {
+        console.error('Fetch error:', error);
         showToast('Error fetching bookings', 'error');
     }
 }
@@ -63,7 +65,7 @@ async function updateBookingStatus(id, status) {
     }
 }
 
-// UI Functions
+// Dashboard Updates
 function updateDashboard() {
     updateStats();
     renderBookingsTable();
@@ -86,62 +88,77 @@ function calculateTodayRevenue() {
         .reduce((sum, b) => sum + parseFloat(b.total_price), 0);
 }
 
+// Table Rendering
 function renderBookingsTable() {
     const tbody = document.getElementById('bookingsTableBody');
-    tbody.innerHTML = '';
+    if (!tbody) return;
 
     const start = (currentPage - 1) * itemsPerPage;
     const paginatedData = bookingsData.slice(start, start + itemsPerPage);
 
-    paginatedData.forEach(booking => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
+    tbody.innerHTML = paginatedData.map(booking => `
+        <tr>
             <td>#${booking.id}</td>
             <td>
-                <div>${booking.name}</div>
-                <small class="text-muted">${booking.phone_number}</small>
+                <div>${booking.name || 'N/A'}</div>
+                <small class="text-muted">${booking.phone_number || 'N/A'}</small>
             </td>
             <td>
-                <div>${booking.pickup_city}</div>
-                <small class="text-muted">${booking.street}</small>
+                <div>${booking.pickup_city || 'N/A'}</div>
+                <small class="text-muted">${booking.street || 'N/A'}</small>
             </td>
             <td>
                 <div>${formatDate(booking.pickup_date)}</div>
-                <small class="text-muted">${booking.pickup_time}</small>
+                <small class="text-muted">${booking.pickup_time || 'N/A'}</small>
             </td>
-            <td>${booking.vehicle_type}</td>
-            <td>${formatCurrency(booking.total_price)}</td>
-            <td><span class="badge bg-${getStatusColor(booking.status)}">${booking.status}</span></td>
+            <td>${booking.vehicle_type || 'N/A'}</td>
+            <td>${formatCurrency(booking.total_price || 0)}</td>
+            <td><span class="badge bg-${getStatusColor(booking.status)}">${booking.status || 'Pending'}</span></td>
             <td>
                 <button onclick="editBooking(${booking.id})" class="btn btn-sm btn-primary">
                     <i class="fas fa-edit"></i> Edit
                 </button>
             </td>
-        `;
-        tbody.appendChild(row);
-    });
+        </tr>
+    `).join('');
 }
+
+// Modal Functions
+function editBooking(id) {
+    const booking = bookingsData.find(b => b.id === id);
+    if (booking) {
+        document.getElementById('editBookingId').value = id;
+        document.getElementById('editStatus').value = booking.status;
+        new bootstrap.Modal(document.getElementById('editModal')).show();
+    }
+}
+
+// Save Changes Event
+document.getElementById('saveChanges')?.addEventListener('click', async () => {
+    const id = document.getElementById('editBookingId').value;
+    const status = document.getElementById('editStatus').value;
+    await updateBookingStatus(id, status);
+    bootstrap.Modal.getInstance(document.getElementById('editModal')).hide();
+});
 
 // Utility Functions
 function formatCurrency(amount) {
-    return new Intl.NumberFormat('de-DE', { 
-        style: 'currency', 
-        currency: 'EUR' 
-    }).format(amount);
+    const formattedAmount = Number(amount).toFixed(2);
+    return `€${formattedAmount}`;
 }
 
+
 function formatDate(dateString) {
-    return new Date(dateString).toLocaleDateString('de-DE');
+    return dateString ? new Date(dateString).toLocaleDateString('de-DE') : 'N/A';
 }
 
 function getStatusColor(status) {
-    const colors = {
+    return {
         'Pending': 'warning',
         'Confirmed': 'success',
         'Completed': 'info',
         'Cancelled': 'danger'
-    };
-    return colors[status] || 'secondary';
+    }[status] || 'secondary';
 }
 
 function showToast(message, type = 'success') {
@@ -154,40 +171,22 @@ function showToast(message, type = 'success') {
     }).showToast();
 }
 
-// Modal Functions
-const editModal = new bootstrap.Modal(document.getElementById('editModal'));
-
-function editBooking(id) {
-    const booking = bookingsData.find(b => b.id === id);
-    document.getElementById('editBookingId').value = id;
-    document.getElementById('editStatus').value = booking.status;
-    editModal.show();
+// Sidebar Functions
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.getElementById('mainContent');
+    sidebar?.classList.toggle('collapsed');
+    mainContent?.classList.toggle('expanded');
 }
 
-document.getElementById('saveChanges').addEventListener('click', async () => {
-    const id = document.getElementById('editBookingId').value;
-    const status = document.getElementById('editStatus').value;
-    await updateBookingStatus(id, status);
-    editModal.hide();
-});
-
-// Mobile responsiveness
 function checkScreenSize() {
     const sidebar = document.getElementById('sidebar');
     const mainContent = document.getElementById('mainContent');
     if (window.innerWidth <= 768) {
-        sidebar.classList.add('collapsed');
-        mainContent.classList.add('expanded');
-    } else {
-        sidebar.classList.remove('collapsed');
-        mainContent.classList.remove('expanded');
+        sidebar?.classList.add('collapsed');
+        mainContent?.classList.add('expanded');
     }
 }
 
-// Event listeners for screen resize
-window.addEventListener('resize', checkScreenSize);
-window.addEventListener('load', checkScreenSize);
 
-// Initialize the dashboard
-fetchBookings();
-setInterval(fetchBookings, 30000); // Refresh every 30 seconds
+

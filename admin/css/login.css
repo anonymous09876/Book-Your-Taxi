@@ -1,0 +1,33 @@
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+.login-header {
+    margin-bottom: 30px;
+}
+.login-header img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.stats-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0,0,0,.075);
+    transition: background-color 0.2s ease;
+}
+
+.badge {
+    padding: 0.5em 1em;
+}

@@ -4492,3 +4492,15 @@ body.rtl-mode .price-wrapper {
       font-size: 0.9rem;
       list-style: number;
     }
+
+
+    
+    .total-price {
+      font-weight: bold;
+      font-size: 1.9em;
+      color: #1eacc7;
+      padding: 15px;
+      margin: 15px 0;
+      background: #f8f9fa;
+      border-radius: 5px;
+  }

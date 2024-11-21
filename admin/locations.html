@@ -75,7 +75,7 @@
                         <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent text-white active">
                             <i class="fas fa-dashboard me-2"></i> Dashboard
                         </a>
-                        <a href="#bookings" class="list-group-item list-group-item-action bg-transparent text-white">
+                        <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent text-white">
                             <i class="fas fa-list me-2"></i> Bookings
                         </a>
                         <a href="#analytics" class="list-group-item list-group-item-action bg-transparent text-white">
@@ -90,7 +90,9 @@
     <i class="fas fa-car me-2"></i> Cars
 </a>
 
-                       
+                        <button id="logoutBtn" class="list-group-item list-group-item-action bg-transparent text-white">
+                            <i class="fas fa-sign-out-alt me-2"></i> Logout
+                        </button>
                     </div>
                 </nav>
             </div>
@@ -112,10 +114,7 @@
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li>                                
-                                <button id="logoutBtn" class="list-group-item list-group-item-action bg-transparent text-dark ml-4">
-                                    <i class="fas fa-sign-out-alt me-2"></i> Logout
-                                </button></li>
+                                <li><button class="dropdown-item" id="logoutBtnHeader"><i class="fas fa-sign-out-alt me-2"></i>Logout</button></li>
                             </ul>
                         </div>
                     </div>
@@ -123,7 +122,6 @@
             </header>
 
             <main class="p-4">
-
                 <!-- Stats Cards Row -->
                 <div class="row g-4 mb-4">
                     <div class="col-12 col-md-3">
@@ -191,103 +189,139 @@
                     </div>
                 </div>
 
-                <!-- Charts Row -->
-                <!-- Charts Section -->
-                <!-- <div class="row">
-                    <div class="col-xl-8 col-lg-7">
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Booking Trends</h6>
-                            </div>
-                            <div class="card-body">
-                                <canvas id="bookingTrendsChart"></canvas>
-                            </div>
-                        </div>
+
+<!-- Add new sections after your existing content -->
+<!-- Locations Management Section -->
+<div id="locationsSection" class="card mb-4">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Locations Management</h5>
+        <button class="btn btn-primary" onclick="openAddLocationModal()">
+            <i class="fas fa-plus me-2"></i>Add Location
+        </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Location Name</th>
+                        <th>Base Price</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="locationsTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Cars Management Section -->
+<div id="carsSection" class="card mb-4">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Cars Management</h5>
+        <button class="btn btn-primary" onclick="openAddCarModal()">
+            <i class="fas fa-plus me-2"></i>Add Car
+        </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Vehicle Type</th>
+                        <th>Capacity</th>
+                        <th>Base Price</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="carsTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Add Location Modal -->
+<div class="modal fade" id="locationModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="locationModalTitle">Add Location</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="locationForm">
+                    <input type="hidden" id="locationId">
+                    <div class="mb-3">
+                        <label class="form-label">Location Name</label>
+                        <input type="text" class="form-control" id="locationName" required>
                     </div>
-                
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Status Distribution</h6>
-                            </div>
-                            <div class="card-body">
-                                <canvas id="statusDistributionChart"></canvas>
-                            </div>
-                        </div>
+                    <div class="mb-3">
+                        <label class="form-label">Base Price</label>
+                        <input type="number" class="form-control" id="locationPrice" required>
                     </div>
-                </div> -->
-                
-
-                <!-- Bookings Section -->
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h5 class="card-title">Bookings Management</h5>
-                            <button class="btn btn-primary" onclick="exportBookings()">
-                                <i class="fas fa-download me-2"></i>Export
-                            </button>
-                        </div>
-
-                        <!-- Search and Filters -->
-                        <div class="search-filters mb-4">
-                            <div class="row g-3">
-                                <div class="col-12 col-md-4">
-                                    <input type="text" class="form-control" id="searchInput" placeholder="Search bookings...">
-                                </div>
-                                <div class="col-12 col-md-3">
-                                    <input type="date" class="form-control" id="dateFilter">
-                                </div>
-                                <div class="col-12 col-md-3">
-                                    <select class="form-select" id="statusFilter">
-                                        <option value="">All Statuses</option>
-                                        <option value="Pending">Pending</option>
-                                        <option value="Confirmed">Confirmed</option>
-                                        <option value="Completed">Completed</option>
-                                        <option value="Cancelled">Cancelled</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-md-2">
-                                    <button class="btn btn-secondary w-100" onclick="resetFilters()">
-                                        Reset
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bookings Table -->
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Customer</th>
-                                        <th>Pickup</th>
-                                        <th>Date & Time</th>
-                                        <th>Vehicle</th>
-                                        <th>Price</th>
-                                        <th>Status</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="bookingsTableBody">
-                                    <!-- Data will be inserted here -->
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Pagination -->
-                        <div class="d-flex justify-content-between align-items-center mt-4">
-                            <div class="text-muted">
-                                Showing <span id="showingEntries">0-0</span> of <span id="totalEntries">0</span> entries
-                            </div>
-                            <nav aria-label="Page navigation">
-                                <ul class="pagination mb-0" id="pagination">
-                                    <!-- Pagination will be inserted here -->
-                                </ul>
-                            </nav>
-                        </div>
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select class="form-select" id="locationStatus">
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
                     </div>
-                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveLocation()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Car Modal -->
+<div class="modal fade" id="carModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="carModalTitle">Add Car</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="carForm">
+                    <input type="hidden" id="carId">
+                    <div class="mb-3">
+                        <label class="form-label">Vehicle Type</label>
+                        <input type="text" class="form-control" id="vehicleType" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Capacity</label>
+                        <input type="number" class="form-control" id="capacity" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Base Price</label>
+                        <input type="number" class="form-control" id="carPrice" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select class="form-select" id="carStatus">
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveCar()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
             </main>
         </div>
 
