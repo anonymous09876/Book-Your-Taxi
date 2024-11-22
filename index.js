@@ -1,7 +1,6 @@
 const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
-require('dotenv').config();
 
 const app = express();
 
@@ -163,6 +162,104 @@ app.delete('/api/bookings/:id', (req, res) => {
         });
     });
 });
+
+
+
+// Get all locations
+app.get('/api/locations', (req, res) => {
+    const query = 'SELECT * FROM locations ORDER BY id';
+    db.query(query, (err, results) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
+        }
+        res.json(results);
+    });
+});
+
+// Get single location by ID
+app.get('/api/locations/:id', (req, res) => {
+    const { id } = req.params;
+    const query = 'SELECT * FROM locations WHERE id = ?';
+
+    db.query(query, [id], (err, results) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
+        }
+
+        if (results.length === 0) {
+            return res.status(404).json({ message: 'Location not found' });
+        }
+
+        res.json(results[0]); // Send back the first (and only) result
+    });
+});
+
+// Add new location
+app.post('/api/locations', (req, res) => {
+    const { name, basePrice } = req.body;
+    const query = 'INSERT INTO locations (name, base_price, status) VALUES (?, ?, ?)';
+    
+    db.query(query, [name, basePrice, 'active'], (err, result) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
+        }
+        res.json({
+            id: result.insertId,
+            name,
+            base_price: basePrice,
+            status: 'active'
+        });
+    });
+});
+
+async function updateLocation() {
+    const id = document.getElementById('editLocationId').value;
+    const name = document.getElementById('editLocationName').value;
+    const basePrice = document.getElementById('editBasePrice').value;
+
+    try {
+        const response = await fetch(`http://localhost:5050/api/locations/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, basePrice })
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Update response:', data);
+        showToast('Location updated successfully', 'success');
+
+        const modal = bootstrap.Modal.getInstance(document.getElementById('editLocationModal'));
+        modal.hide();
+
+        loadLocations(); // Reload the locations to reflect the changes
+    } catch (error) {
+        console.error('Error updating location:', error);
+        showToast('Error updating location: ' + error.message, 'error');
+    }
+}
+
+// Delete location
+app.delete('/api/locations/:id', (req, res) => {
+    const { id } = req.params;
+    const query = 'DELETE FROM locations WHERE id = ?';
+    
+    db.query(query, [id], (err, result) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
+        }
+        res.json({ message: 'Location deleted successfully' });
+    });
+});
+
+
+
+
 
 const PORT = process.env.PORT || 5050;
 app.listen(PORT, () => {

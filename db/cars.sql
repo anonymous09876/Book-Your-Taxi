@@ -1,0 +1,9 @@
+CREATE TABLE cars (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    vehicle_type VARCHAR(100) NOT NULL,
+    capacity INT NOT NULL,
+    base_price DECIMAL(10,2) NOT NULL,
+    status ENUM('active', 'inactive') DEFAULT 'active',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);

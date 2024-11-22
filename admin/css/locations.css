@@ -1,0 +1,64 @@
+
+.sidebar {
+    min-height: 100vh;
+    width: 250px;
+    transition: all 0.3s;
+}
+.sidebar.collapsed {
+    margin-left: -250px;
+}
+.main-content {
+    width: calc(100% - 250px);
+    transition: all 0.3s;
+}
+.main-content.expanded {
+    width: 100%;
+}
+.stats-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.booking-tabs .nav-link.active {
+    background-color: #0d6efd;
+    color: white;
+}
+.search-filters {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.chart-container {
+    height: 300px;
+    margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        z-index: 1000;
+    }
+    .main-content {
+        width: 100%;
+    }
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.action-buttons button {
+    margin-right: 5px;
+}
+
+.status-active {
+    color: green;
+}
+
+.status-inactive {
+    color: red;
+}
