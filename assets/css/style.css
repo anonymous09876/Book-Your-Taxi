@@ -4504,3 +4504,11 @@ body.rtl-mode .price-wrapper {
       background: #f8f9fa;
       border-radius: 5px;
   }
+
+  .service-img img {
+    width: 100%; /* Makes the image responsive */
+    height: 200px; /* Sets a fixed height */
+    object-fit: cover; /* Ensures the image fits without distortion */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+  }
+  
