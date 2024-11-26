@@ -212,6 +212,7 @@ app.post('/api/locations', (req, res) => {
     });
 });
 
+
 async function updateLocation() {
     const id = document.getElementById('editLocationId').value;
     const name = document.getElementById('editLocationName').value;
