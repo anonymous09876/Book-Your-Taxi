@@ -1,91 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Mirrored from live.themewild.com/Book Driver/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Dec 2023 14:23:05 GMT -->
+  <!-- Mirrored from live.themewild.com/Book Driver/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Dec 2023 14:23:05 GMT -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content />
-  <meta name="keywords" content />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content />
+    <meta name="keywords" content />
 
-  <title>Book Your Driver</title>
+    <title>Book Your Driver</title>
 
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'en,de', // Languages to be included (English, German)
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false // Disable auto display
-        }, 'google_translate_element');
-    }
-</script>
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <link rel="icon" type="image/x-icon" href="assets/img/logo/brand.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all-fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery.timepicker.min.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+ 
+  </head>
 
-  <link rel="icon" type="image/x-icon" href="assets/img/logo/brand.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/all-fontawesome.min.css" />
-  <link rel="stylesheet" href="assets/css/animate.min.css" />
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
-  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
-  <link rel="stylesheet" href="assets/css/jquery.timepicker.min.css" />
-  <link rel="stylesheet" href="assets/css/nice-select.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-</head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top-wrapper">
+            <div class="header-top-left">
+              <div class="header-top-contact">
+                <ul>
+                  <li>
+                    <a
+                      href="mailto:info@airportviennatransfers.at"
+                      ><i class="far fa-envelopes"></i>
+                      <span
+                        class="__cf_email__"
+                        data-cfemail="83eaede5ecc3e6fbe2eef3efe6ade0ecee"
+                        > info@airportviennatransfers.at</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:+436677824612"
+                      ><i class="far fa-phone-volume"></i> +43 66778 24612</a
+                    >
+                  </li>
 
-<body>
-  <header class="header">
-    <div class="header-top">
-      <div class="container">
-        <div class="header-top-wrapper">
-          <div class="header-top-left">
-            <div class="header-top-contact">
+                </ul>
+              </div>
+            </div>
+            <div class="header-top-right">
+              <div class="header-top-link">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="languageDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
+                        class="flag-img"
+                        alt="USA Flag"
+                      />
+                      English
+                    </a>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="languageDropdown"
+                    >
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="switchLanguage('en')"
+                        >
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
+                            class="flag-img"
+                            alt="USA Flag"
+                          />
+                          English
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          onclick="switchLanguage('de')"
+                        >
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png"
+                            class="flag-img"
+                            alt="Germany Flag"
+                          />
+                          German
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="header-top-social">
+                <span>Follow Us: </span>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-navigation">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container position-relative">
+            <a class="navbar-brand" href="#">
+              <img src="assets/img/logo/logo.jpg" alt="logo">
+              <!-- <h1><span style="color: #1eacc7">Book</span> Driver</h1> -->
+            </a>
+            <div class="mobile-menu-right">
+              <div class="search-btn">
+                <button type="button" class="nav-right-link">
+                  <i class="far fa-search"></i>
+                </button>
+              </div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#main_nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-mobile-icon"
+                  ><i class="far fa-bars"></i
+                ></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="main_nav">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Order Online
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item" href="./toairport.html"
+                        >To the Airport</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./fromairport.html"
+                        >From the Airport</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="./price.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./service.html">Service</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+              </ul>
+
+              <div class="nav-right">
+                <div class="search-btn">
+                  <button type="button" class="nav-right-link">
+                    <i class="far fa-search"></i>
+                  </button>
+                </div>
+                <div class="nav-right-btn mt-2">
+                  <a href="./price.html" class="theme-btn"
+                    ><span class="fas fa-taxi"></span>Book A Taxi</a
+                  >
+                </div>
+                <div class="sidebar-btn">
+                  <button type="button" class="nav-right-link">
+                    <i class="far fa-bars-filter"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="search-area">
+              <form action="#">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Type Keyword..."
+                  />
+                  <button type="submit" class="search-icon-btn">
+                    <i class="far fa-search"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="google_translate_element">
+      <div class="sidebar-popup">
+        <div class="sidebar-wrapper">
+          <div class="sidebar-content">
+            <button type="button" class="close-sidebar-popup">
+              <i class="far fa-xmark"></i>
+            </button>
+
+            <!-- Logo Section -->
+            <div class="sidebar-logo">
+              <!-- <img src="assets/img/logo/logo.png" alt="logo"> -->
+              <h1><span style="color: #1eacc7">Book</span> Driver</h1>
+            </div>
+
+            <!-- About Us Section -->
+            <div class="sidebar-about">
+              <h4>About Book Your Driver</h4>
+              <p>
+                Book Your Driver offers premium chauffeur services in Vienna,
+                specializing in airport transfers, city tours, and business
+                travel. Trusted since 2014 for reliability and comfort.
+              </p>
+            </div>
+
+            <!-- Contact Information Section -->
+            <div class="sidebar-contact">
+              <h4>Contact Us</h4>
               <ul>
                 <li>
-                  <a href="https://live.themewild.com/cdn-cgi/l/email-protection#40292e262f002538212d302c256e232f2d"><i
-                      class="far fa-envelopes"></i>
-                    <span class="__cf_email__"
-                      data-cfemail="83eaede5ecc3e6fbe2eef3efe6ade0ecee">[email&#160;protected]</span></a>
+                  <h6>Email</h6>
+                  <a href="mailto:info@airportviennatransfers.at"
+                    ><i class="far fa-envelope"></i>info@airportviennatransfers.at</a
+                  >
                 </li>
                 <li>
-                  <a href="tel:+21236547898"><i class="far fa-phone-volume"></i> +2 123 654 7898</a>
+                  <h6>Phone</h6>
+                  <a href="tel:+436677824612"
+                    ><i class="far fa-phone"></i> +43 667 7824612</a
+                  >
                 </li>
                 <li>
-                  <a href="#"><i class="far fa-alarm-clock"></i> Sun - Fri (08AM -
-                    10PM)</a>
+                  <h6>Location</h6>
+                  <a href="#"
+                    ><i class="far fa-location-dot"></i>Vienna, Austria</a
+                  >
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="header-top-right">
-            <div class="header-top-link">
-              <ul class="navbar-nav">
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" class="flag-img" alt="USA Flag"> English
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                          <li>
-                              <a class="dropdown-item" href="#" onclick="switchLanguage('en')">
-                                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" class="flag-img" alt="USA Flag"> English
-                              </a>
-                          </li>
-                          <li>
-                              <a class="dropdown-item" href="#" onclick="switchLanguage('de')">
-                                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png" class="flag-img" alt="Germany Flag"> German
-                              </a>
-                          </li>
-                      </ul>
-                  </li>
-              </ul>
-          </div>
-            <div class="header-top-social">
-              <span>Follow Us: </span>
+
+            <!-- Social Media Links Section -->
+            <div class="sidebar-social">
+              <h4>Connect With Us</h4>
               <a href="#"><i class="fab fa-facebook"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
@@ -94,1162 +294,1131 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="main-navigation">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container position-relative">
-          <a class="navbar-brand" href="#">
-            <!-- <img src="assets/img/logo/logo.png" alt="logo"> -->
-            <h1><span style="color: #1eacc7">Book</span> Driver</h1>
-          </a>
-          <div class="mobile-menu-right">
-            <div class="search-btn">
-              <button type="button" class="nav-right-link">
-                <i class="far fa-search"></i>
-              </button>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
-              aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-mobile-icon"><i class="far fa-bars"></i></span>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse" id="main_nav">
-            <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="./about.html">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Order Online
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="./toairport.html">To the Airport</a></li>
-                  <li><a class="dropdown-item" href="./fromairport.html">From the Airport</a></li>
-                </ul>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link" href="./price.html">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./service.html">Service</a>
-              </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="./contact.html">Contact</a>
-              </li>
-            </ul>
+      <main class="main">
+        <div class="hero-section">
+          <div class="hero-slider owl-carousel owl-theme">
+            <!-- Slide 1 -->
+            <div
+              class="hero-single"
+              style="background: url(./assets/img/slider/slider-1.jpg)"
+            >
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-12 col-lg-9 mx-auto">
+                    <div class="hero-content text-center">
 
-            <div class="nav-right">
-              <div class="search-btn">
-                <button type="button" class="nav-right-link">
-                  <i class="far fa-search"></i>
-                </button>
-              </div>
-              <div class="nav-right-btn mt-2">
-                <a href="#" class="theme-btn"><span class="fas fa-taxi"></span>Book A Taxi</a>
-              </div>
-              <div class="sidebar-btn">
-                <button type="button" class="nav-right-link">
-                  <i class="far fa-bars-filter"></i>
-                </button>
+
+                      <div class="hero-btn justify-content-center">
+                        <a href="./fromairport.html" class="theme-btn">
+                          <i class="fas fa-plane"></i>
+                          From the Airport<i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="./toairport.html" class="theme-btn theme-btn2">
+                          <i class="fas fa-plane"></i>
+                          To the Airport<i class="fas fa-arrow-right"></i>
+                        </a>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="search-area">
-            <form action="#">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Type Keyword..." />
-                <button type="submit" class="search-icon-btn">
-                  <i class="far fa-search"></i>
-                </button>
+            <!-- Slide 2 -->
+            <div
+              class="hero-single"
+              style="background: url(./assets/img/slider/slider-2.jpg)"
+            >
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-12 col-lg-9 mx-auto">
+                    <div class="hero-content text-center">
+                      <div class="hero-btn justify-content-center">
+                        <a href="./fromairport.html" class="theme-btn">
+                          <i class="fas fa-plane"></i>
+                          From the Airport<i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="./toairport.html" class="theme-btn theme-btn2">
+                          <i class="fas fa-plane"></i>
+                          To the Airport<i class="fas fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </form>
+            </div>
+
+            <!-- Slide 3 -->
+            <div
+              class="hero-single"
+              style="background: url(./assets/img/slider/slider-3.jpg)"
+            >
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-12 col-lg-9 mx-auto">
+                    <div class="hero-content text-center">
+                      <div class="hero-btn justify-content-center">
+                        <a href="./fromairport.html" class="theme-btn">
+                          <i class="fas fa-plane"></i>
+                          From the Airport<i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="./toairport.html" class="theme-btn theme-btn2">
+                          <i class="fas fa-plane"></i>
+                          To the Airport<i class="fas fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div
+              class="hero-single"
+              style="background: url(./assets/img/slider/slider-4.jpg)"
+            >
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-12 col-lg-9 mx-auto">
+                    <div class="hero-content text-center">
+                      <div class="hero-btn justify-content-center">
+                        <a href="./fromairport.html" class="theme-btn">
+                          <i class="fas fa-plane"></i>
+                          From the Airport<i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="./toairport.html" class="theme-btn theme-btn2">
+                          <i class="fas fa-plane"></i>
+                          To the Airport<i class="fas fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div
+              class="hero-single"
+              style="background: url(./assets/img/slider/slider-5.jpg)"
+            >
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-12 col-lg-9 mx-auto">
+                    <div class="hero-content text-center">
+                      <div class="hero-btn justify-content-center">
+                        <a href="./fromairport.html" class="theme-btn">
+                          <i class="fas fa-plane"></i>
+                          From the Airport<i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="./toairport.html" class="theme-btn theme-btn2">
+                          <i class="fas fa-plane"></i>
+                          To the Airport<i class="fas fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div
+              class="hero-single"
+              style="background: url(./assets/img/slider/slider-6.jpg)"
+            >
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-12 col-lg-9 mx-auto">
+                    <div class="hero-content text-center">
+                      <div class="hero-btn justify-content-center">
+                        <a href="./fromairport.html" class="theme-btn">
+                          <i class="fas fa-plane"></i>
+                          From the Airport<i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="./toairport.html" class="theme-btn theme-btn2">
+                          <i class="fas fa-plane"></i>
+                          To the Airport<i class="fas fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    </div>
-  </header>
-   
-  <div id="google_translate_element">
 
-  <div class="sidebar-popup">
-    <div class="sidebar-wrapper">
-      <div class="sidebar-content">
-        <button type="button" class="close-sidebar-popup">
-          <i class="far fa-xmark"></i>
-        </button>
-
-        <!-- Logo Section -->
-        <div class="sidebar-logo">
-          <!-- <img src="assets/img/logo/logo.png" alt="logo"> -->
-          <h1><span style="color: #1eacc7">Book</span> Driver</h1>
+        <!-- Modal for Success Message -->
+        <div id="successModal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <p id="messageText">Booking saved successfully.</p>
+          </div>
         </div>
 
-        <!-- About Us Section -->
-        <div class="sidebar-about">
-          <h4>About Book Your Driver</h4>
-          <p>
-            Book Your Driver offers premium chauffeur services in Vienna,
-            specializing in airport transfers, city tours, and business
-            travel. Trusted since 2014 for reliability and comfort.
-          </p>
+        <!-- Modal Styles -->
+
+        <!-- Include jQuery for easier DOM manipulation -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <div class="about-area py-120">
+          <div class="container">
+            <div class="row align-items-center">
+              <!-- Left Image and Experience Section -->
+              <div class="col-lg-6">
+                <div class="about-left wow fadeInLeft" data-wow-delay=".25s">
+                  <div class="about-img">
+                    <img
+                      src="assets/img/about/01.png"
+                      alt="About Book Your Driver"
+                    />
+                  </div>
+                  <div class="about-experience">
+                    <div class="about-experience-icon">
+                      <img
+                        src="assets/img/icon/taxi-booking.svg"
+                        alt="Experience Icon"
+                      />
+                    </div>
+                    <b
+                      >20 Years of <br />
+                      Trusted Service</b
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Text Content Section -->
+              <div class="col-lg-6">
+                <div class="about-right wow fadeInRight" data-wow-delay=".25s">
+                  <div class="site-heading mb-3">
+                    <span class="site-title-tagline justify-content-start">
+                      <i class="flaticon-drive"></i> About Us
+                    </span>
+                    <h2 class="site-title">
+                      Your Trusted <span>Transfer Service</span> Worldwide
+                    </h2>
+                  </div>
+
+                  <!-- About Text -->
+                  <p class="about-text">
+                    For over 20 years, I have been pursuing my profession with
+                    passion and professionalism. During this time, I have gained
+                    extensive expertise and profound experience, which I bring
+                    to my work every day. As a versatile service provider, I
+                    offer a combination of discreet protection, reliable
+                    service, and absolute dependability.
+                  </p>
+
+                  <!-- Expertise Highlights -->
+                  <div class="about-list-wrapper">
+                    <ul class="about-list list-unstyled">
+                      <li>
+                        <strong>Passenger Transport:</strong> Safe, comfortable,
+                        and punctual. Whether it’s a business trip or a personal
+                        occasion, I ensure you reach your destination
+                        stress-free.
+                      </li>
+                      <li>
+                        <strong>Personal Protection:</strong> Discreet
+                        protection for your safety. I provide tailored solutions
+                        to give you peace of mind in any situation.
+                      </li>
+                      <li>
+                        <strong>Valuables Transport:</strong> Trusted
+                        transportation of valuable goods, where discretion and
+                        care are the highest priorities.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Button to Learn More -->
+                  <a href="about.html" class="theme-btn mt-4"
+                    >Discover More<i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Contact Information Section -->
-        <div class="sidebar-contact">
-          <h4>Contact Us</h4>
-          <ul>
-            <li>
-              <h6>Email</h6>
-              <a href="mailto:office@bookyourdriver.eu"><i class="far fa-envelope"></i> office@bookyourdriver.eu</a>
-            </li>
-            <li>
-              <h6>Phone</h6>
-              <a href="tel:+436677824612"><i class="far fa-phone"></i> +43 667 7824612</a>
-            </li>
-            <li>
-              <h6>Location</h6>
-              <a href="#"><i class="far fa-location-dot"></i> Vienna, Austria</a>
-            </li>
-          </ul>
+        <div class="service-area bg py-120">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 mx-auto">
+                <div class="site-heading text-center">
+                  <span class="site-title-tagline">Services</span>
+                  <h2 class="site-title">Our Best Services For You</h2>
+                  <div class="heading-divider"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <div class="service-item wow fadeInUp" data-wow-delay=".25s">
+                  <div class="service-img">
+                    <img src="./assets/img/service/home/1.jpg" alt />
+                  </div>
+                  <div class="service-icon">
+                    <img src="assets/img/icon/taxi-booking-1.svg" alt />
+                  </div>
+                  <div class="service-content">
+                    <h3 class="service-title">
+                      <a href="#">Online Booking</a>
+                    </h3>
+                    <p class="service-text">
+                      There are many variations of passages orem psum available
+                      but the majority have suffered alteration in some form by
+                      injected.
+                    </p>
+                    <div class="service-arrow">
+                      <a href="./service.html" class="theme-btn"
+                        >Read More<i class="fas fa-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-item wow fadeInUp" data-wow-delay=".50s">
+                  <div class="service-img">
+                    <img src="./assets/img/service/home/2.jpg" alt />
+                  </div>
+                  <div class="service-icon">
+                    <img src="assets/img/icon/city-taxi.svg" alt />
+                  </div>
+                  <div class="service-content">
+                    <h3 class="service-title">
+                      <a href="#">City Transport</a>
+                    </h3>
+                    <p class="service-text">
+                      There are many variations of passages orem psum available
+                      but the majority have suffered alteration in some form by
+                      injected.
+                    </p>
+                    <div class="service-arrow">
+                      <a href="./service.html" class="theme-btn"
+                        >Read More<i class="fas fa-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-item wow fadeInUp" data-wow-delay=".75s">
+                  <div class="service-img">
+                    <img src="./assets/img/service/home/3.jpg" alt />
+                  </div>
+                  <div class="service-icon">
+                    <img src="assets/img/icon/airport.svg" alt />
+                  </div>
+                  <div class="service-content">
+                    <h3 class="service-title">
+                      <a href="#">Airport Transport</a>
+                    </h3>
+                    <p class="service-text">
+                      There are many variations of passages orem psum available
+                      but the majority have suffered alteration in some form by
+                      injected.
+                    </p>
+                    <div class="service-arrow">
+                      <a href="./service.html" class="theme-btn"
+                        >Read More<i class="fas fa-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-item wow fadeInUp" data-wow-delay=".25s">
+                  <div class="service-img">
+                    <img src="./assets/img/service/home/4.jpg" alt />
+                  </div>
+                  <div class="service-icon">
+                    <img src="assets/img/icon/business.svg" alt />
+                  </div>
+                  <div class="service-content">
+                    <h3 class="service-title">
+                      <a href="#">Business Transport</a>
+                    </h3>
+                    <p class="service-text">
+                      There are many variations of passages orem psum available
+                      but the majority have suffered alteration in some form by
+                      injected.
+                    </p>
+                    <div class="service-arrow">
+                      <a href="./service.html" class="theme-btn"
+                        >Read More<i class="fas fa-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-item wow fadeInUp" data-wow-delay=".50s">
+                  <div class="service-img">
+                    <img src="./assets/img/service/home/5.jpg" alt />
+                  </div>
+                  <div class="service-icon">
+                    <img src="assets/img/icon/taxi-2.svg" alt />
+                  </div>
+                  <div class="service-content">
+                    <h3 class="service-title">
+                      <a href="#">Regular Transport</a>
+                    </h3>
+                    <p class="service-text">
+                      There are many variations of passages orem psum available
+                      but the majority have suffered alteration in some form by
+                      injected.
+                    </p>
+                    <div class="service-arrow">
+                      <a href="./service.html" class="theme-btn"
+                        >Read More<i class="fas fa-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-item wow fadeInUp" data-wow-delay=".75s">
+                  <div class="service-img">
+                    <img src="./assets/img/service/home/6.jpg" alt />
+                  </div>
+                  <div class="service-icon">
+                    <img src="assets/img/icon/taxi.svg" alt />
+                  </div>
+                  <div class="service-content">
+                    <h3 class="service-title">
+                      <a href="#">Tour Transport</a>
+                    </h3>
+                    <p class="service-text">
+                      There are many variations of passages orem psum available
+                      but the majority have suffered alteration in some form by
+                      injected.
+                    </p>
+                    <div class="service-arrow">
+                      <a href="./service.html" class="theme-btn"
+                        >Read More<i class="fas fa-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Social Media Links Section -->
-        <div class="sidebar-social">
-          <h4>Connect With Us</h4>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="taxi-area py-120">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 mx-auto">
+                <div class="site-heading text-center">
+                  <span class="site-title-tagline">Our Taxi</span>
+                  <h2 class="site-title">Let's Check Available Taxi</h2>
+                  <div class="heading-divider"></div>
+                </div>
+              </div>
+            </div>
 
-  <main class="main">
-    <div class="hero-section">
-      <div class="hero-slider owl-carousel owl-theme">
+            <!-- Filter Controls for Car Types -->
+            <div class="filter-controls">
+              <ul class="filter-btns">
+                <li class="active" data-filter="*">All Taxi</li>
+                <li data-filter=".caravan">Limousine</li>
+                <li data-filter=".limousine">Kombi</li>
+                <li data-filter=".nine-seater">Mini Van</li>
+              </ul>
+            </div>
+
+            <div class="row filter-box">
+              <!-- Caravan Example -->
+              <div class="col-md-6 col-lg-4 filter-item caravan">
+                <div class="taxi-item">
+                  <div class="taxi-img">
+                    <img
+                      src="assets/img/taxi/Limousine.jpg"
+                      alt="Caravan Taxi"
+                    />
+                  </div>
+                  <div class="taxi-content">
+                    <div class="taxi-head">
+                      <h4>Limousine</h4>
+                    </div>
+                    <div class="taxi-feature">
+                      <ul>
+                        <li>
+                          <i class="far fa-person-seat"></i> Passengers:
+                          <span>6</span>
+                        </li>
+                        <li>
+                          <i class="far fa-suitcase-rolling"></i> Luggage Carry:
+                          <span>4</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <a href="./price.html" class="theme-btn"
+                      >Book Taxi Now<i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Limousine Example -->
+              <div class="col-md-6 col-lg-4 filter-item limousine">
+                <div class="taxi-item">
+                  <div class="taxi-img">
+                    <img src="./assets/img/taxi/Kombi.jpg" alt="Kombi" />
+                  </div>
+                  <div class="taxi-content">
+                    <div class="taxi-head">
+                      <h4>Kombi</h4>
+                    </div>
+                    <div class="taxi-feature">
+                      <ul>
+                        <li>
+                          <i class="far fa-person-seat"></i> Passengers:
+                          <span>3</span>
+                        </li>
+                        <li>
+                          <i class="far fa-suitcase-rolling"></i> Luggage Carry:
+                          <span>3</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <a href="./price.html" class="theme-btn"
+                      >Book Taxi Now<i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 9 Seaters Example -->
+              <div class="col-md-6 col-lg-4 filter-item nine-seater">
+                <div class="taxi-item">
+                  <div class="taxi-img">
+                    <img src="./assets/img/taxi/Mini Van.jpg" alt="Mini Van" />
+                  </div>
+                  <div class="taxi-content">
+                    <div class="taxi-head">
+                      <h4>Mini Van</h4>
+                    </div>
+                    <div class="taxi-feature">
+                      <ul>
+                        <li>
+                          <i class="far fa-person-seat"></i> Passengers:
+                          <span>9</span>
+                        </li>
+                        <li>
+                          <i class="far fa-suitcase-rolling"></i> Luggage Carry:
+                          <span>5</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <a href="./price.html" class="theme-btn"
+                      >Book Taxi Now<i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-area vda-2">
+          <div class="container">
+            <div
+              class="video-content"
+              style="background-image: url('./assets/img/video/01.jpg')"
+            >
+              <div class="row align-items-center">
+                <div class="col-lg-12">
+                  <div class="video-wrapper">
+                    <a
+                      class="play-btn popup-youtube"
+                      href="./assets/img/video/video.mp4"
+                    >
+                      <i class="fas fa-play"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="choose-area cha-2 py-120">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <div class="choose-content">
+                  <div
+                    class="site-heading wow fadeInDown mb-4"
+                    data-wow-delay=".25s"
+                  >
+                    <span
+                      class="site-title-tagline text-white justify-content-start"
+                    >
+                      <i class="flaticon-drive"></i> Why Choose Us
+                    </span>
+                    <h2 class="site-title text-white mb-10">
+                      We are dedicated <span>to providing</span> quality service
+                    </h2>
+                    <p class="text-white">
+                      With a commitment to quality and safety, we offer reliable
+                      services backed by experienced drivers and modern
+                      vehicles, ensuring every journey is comfortable and
+                      secure.
+                    </p>
+                  </div>
+                  <div class="choose-img wow fadeInUp" data-wow-delay=".25s">
+                    <img
+                      src="./assets/img/taxi/xxxx.jpg"
+                      alt="Our team providing quality service to clients"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div
+                  class="choose-content-wrapper wow fadeInRight"
+                  data-wow-delay=".25s"
+                >
+                  <!-- Feature 1: Best Quality Taxi -->
+                  <div class="choose-item">
+                    <span class="choose-count">01</span>
+                    <div class="choose-item-icon">
+                      <img
+                        src="assets/img/icon/taxi-1.svg"
+                        alt="Quality taxi icon"
+                      />
+                    </div>
+                    <div class="choose-item-info">
+                      <h3>Best Quality Taxi</h3>
+                      <p>
+                        Our fleet is composed of modern, well-maintained
+                        vehicles to ensure you enjoy a smooth and safe ride to
+                        your destination.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Feature 2: Expert Drivers -->
+                  <div class="choose-item ms-lg-5">
+                    <span class="choose-count">02</span>
+                    <div class="choose-item-icon">
+                      <img
+                        src="assets/img/icon/driver.svg"
+                        alt="Expert driver icon"
+                      />
+                    </div>
+                    <div class="choose-item-info">
+                      <h3>Expert Drivers</h3>
+                      <p>
+                        Our drivers are highly experienced and prioritize safety
+                        and customer service, making your journey pleasant and
+                        worry-free.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Feature 3: Many Locations -->
+                  <div class="choose-item mb-lg-0">
+                    <span class="choose-count">03</span>
+                    <div class="choose-item-icon">
+                      <img
+                        src="assets/img/icon/taxi-location.svg"
+                        alt="Multiple locations icon"
+                      />
+                    </div>
+                    <div class="choose-item-info">
+                      <h3>Many Locations</h3>
+                      <p>
+                        With service across numerous locations, we are ready to
+                        assist you wherever you need to go, ensuring convenience
+                        and accessibility.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-area py-120">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 mx-auto">
+                <div class="site-heading text-center">
+                  <span class="site-title-tagline">
+                    <i class="flaticon-drive"></i> Testimonials
+                  </span>
+                  <h2 class="site-title text-white">
+                    What Our Clients <span>Say</span>
+                  </h2>
+                  <div class="heading-divider"></div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slider owl-carousel owl-theme">
+              <!-- Testimonial 1 -->
+              <div class="testimonial-single">
+                <div class="testimonial-content">
+                  <div class="testimonial-author-img">
+                    <img
+                      src="assets/img/testimonial/01.jpg"
+                      alt="Testimonial by Emma Carter"
+                    />
+                  </div>
+                  <div class="testimonial-author-info">
+                    <h4>Emma Carter</h4>
+                    <p>Business Traveler</p>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <span class="testimonial-quote-icon">
+                    <i class="far fa-quote-right"></i>
+                  </span>
+                  <p>
+                    "The professionalism of the drivers and the comfort of the vehicles
+                    exceeded my expectations. My business trips have never been this
+                    smooth!"
+                  </p>
+                </div>
+                <div class="testimonial-rate">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
         
-        <!-- Slide 1 -->
-        <div class="hero-single" style="background: url(./assets/img/slider/slider-1.jpg)">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-12 col-lg-9 mx-auto">
-                <div class="hero-content text-center">
-                  <div class="hero-btn justify-content-center">
-                    <a href="#" class="theme-btn">
-                      <i class="fas fa-plane"></i>
-                      From the Airport<i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#" class="theme-btn theme-btn2">
-                      <i class="fas fa-plane"></i>
-                      To the Airport<i class="fas fa-arrow-right"></i>
-                    </a>
+              <!-- Testimonial 2 -->
+              <div class="testimonial-single">
+                <div class="testimonial-content">
+                  <div class="testimonial-author-img">
+                    <img
+                      src="assets/img/testimonial/02.jpg"
+                      alt="Testimonial by Liam Hayes"
+                    />
                   </div>
+                  <div class="testimonial-author-info">
+                    <h4>Liam Hayes</h4>
+                    <p>Family Traveler</p>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <span class="testimonial-quote-icon">
+                    <i class="far fa-quote-right"></i>
+                  </span>
+                  <p>
+                    "Traveling with my family has always been hectic, but Book Your
+                    Driver made it stress-free. Highly recommended for families!"
+                  </p>
+                </div>
+                <div class="testimonial-rate">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+        
+              <!-- Testimonial 3 -->
+              <div class="testimonial-single">
+                <div class="testimonial-content">
+                  <div class="testimonial-author-img">
+                    <img
+                      src="assets/img/testimonial/03.jpg"
+                      alt="Testimonial by Sophia Bennett"
+                    />
+                  </div>
+                  <div class="testimonial-author-info">
+                    <h4>Sophia Bennett</h4>
+                    <p>Frequent Traveler</p>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <span class="testimonial-quote-icon">
+                    <i class="far fa-quote-right"></i>
+                  </span>
+                  <p>
+                    "Whether for airport transfers or city tours, this service is
+                    impeccable. Punctual, courteous, and comfortable."
+                  </p>
+                </div>
+                <div class="testimonial-rate">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+        
+              <!-- Testimonial 4 -->
+              <div class="testimonial-single">
+                <div class="testimonial-content">
+                  <div class="testimonial-author-img">
+                    <img
+                      src="assets/img/testimonial/04.jpg"
+                      alt="Testimonial by Daniel Scott"
+                    />
+                  </div>
+                  <div class="testimonial-author-info">
+                    <h4>Daniel Scott</h4>
+                    <p>Tourist</p>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <span class="testimonial-quote-icon">
+                    <i class="far fa-quote-right"></i>
+                  </span>
+                  <p>
+                    "Exploring a new city was made so much easier with Book Your Driver.
+                    Reliable service and knowledgeable drivers!"
+                  </p>
+                </div>
+                <div class="testimonial-rate">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+        
+              <!-- Testimonial 5 -->
+              <div class="testimonial-single">
+                <div class="testimonial-content">
+                  <div class="testimonial-author-img">
+                    <img
+                      src="assets/img/testimonial/05.jpg"
+                      alt="Testimonial by Olivia Turner"
+                    />
+                  </div>
+                  <div class="testimonial-author-info">
+                    <h4>Olivia Turner</h4>
+                    <p>Corporate Client</p>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <span class="testimonial-quote-icon">
+                    <i class="far fa-quote-right"></i>
+                  </span>
+                  <p>
+                    "Our company uses their service regularly for corporate events, and
+                    we’ve always been impressed with their professionalism."
+                  </p>
+                </div>
+                <div class="testimonial-rate">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    
-        <!-- Slide 2 -->
-        <div class="hero-single" style="background: url(./assets/img/slider/slider-2.jpg)">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-12 col-lg-9 mx-auto">
-                <div class="hero-content text-center">
-                  <div class="hero-btn justify-content-center">
-                    <a href="#" class="theme-btn">
-                      <i class="fas fa-plane"></i>
-                      From the Airport<i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#" class="theme-btn theme-btn2">
-                      <i class="fas fa-plane"></i>
-                      To the Airport<i class="fas fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Slide 3 -->
-        <div class="hero-single" style="background: url(./assets/img/slider/slider-3.jpg)">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-12 col-lg-9 mx-auto">
-                <div class="hero-content text-center">
-                  <div class="hero-btn justify-content-center">
-                    <a href="#" class="theme-btn">
-                      <i class="fas fa-plane"></i>
-                      From the Airport<i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#" class="theme-btn theme-btn2">
-                      <i class="fas fa-plane"></i>
-                      To the Airport<i class="fas fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Slide 4 -->
-        <div class="hero-single" style="background: url(./assets/img/slider/slider-4.jpg)">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-12 col-lg-9 mx-auto">
-                <div class="hero-content text-center">
-                  <div class="hero-btn justify-content-center">
-                    <a href="#" class="theme-btn">
-                      <i class="fas fa-plane"></i>
-                      From the Airport<i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#" class="theme-btn theme-btn2">
-                      <i class="fas fa-plane"></i>
-                      To the Airport<i class="fas fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Slide 5 -->
-        <div class="hero-single" style="background: url(./assets/img/slider/slider-5.jpg)">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-12 col-lg-9 mx-auto">
-                <div class="hero-content text-center">
-                  <div class="hero-btn justify-content-center">
-                    <a href="#" class="theme-btn">
-                      <i class="fas fa-plane"></i>
-                      From the Airport<i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#" class="theme-btn theme-btn2">
-                      <i class="fas fa-plane"></i>
-                      To the Airport<i class="fas fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Slide 6 -->
-        <div class="hero-single" style="background: url(./assets/img/slider/slider-6.jpg)">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-12 col-lg-9 mx-auto">
-                <div class="hero-content text-center">
-                  <div class="hero-btn justify-content-center">
-                    <a href="#" class="theme-btn">
-                      <i class="fas fa-plane"></i>
-                      From the Airport<i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#" class="theme-btn theme-btn2">
-                      <i class="fas fa-plane"></i>
-                      To the Airport<i class="fas fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-      </div>
-    </div>
-    
+        
 
-    <!-- Modal for Success Message -->
-    <div id="successModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="closeModal">&times;</span>
-        <p id="messageText">Booking saved successfully.</p>
-      </div>
-    </div>
-
-    <!-- Modal Styles -->
-
-    <!-- Include jQuery for easier DOM manipulation -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <div class="about-area py-120">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Left Image and Experience Section -->
-          <div class="col-lg-6">
-            <div class="about-left wow fadeInLeft" data-wow-delay=".25s">
-              <div class="about-img">
-                <img src="assets/img/about/01.png" alt="About Book Your Driver" />
-              </div>
-              <div class="about-experience">
-                <div class="about-experience-icon">
-                  <img src="assets/img/icon/taxi-booking.svg" alt="Experience Icon" />
+        <div class="cta-area">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-7 text-center text-lg-start">
+                <div class="cta-text cta-divider">
+                  <h1>Book Your Cab - Simple and Affordable</h1>
+                  <p>
+                    It is a long-established fact that a reader will be
+                    distracted by the readable content of a page when looking at
+                    its layout. The point of using it is that it has a normal
+                    distribution of letters.
+                  </p>
                 </div>
-                <b>20 Years of <br /> Trusted Service</b>
+              </div>
+              <div class="col-lg-5 text-center text-lg-end">
+                <div class="mb-20">
+                  <a href="tel:+21236547898" class="cta-number">
+                    <i class="far fa-headset"></i> +2 123 654 7898
+                  </a>
+                </div>
+                <div class="cta-btn">
+                  <a href="#book-now" class="theme-btn">
+                    Book Your Cab <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-    
-          <!-- Right Text Content Section -->
-          <div class="col-lg-6">
-            <div class="about-right wow fadeInRight" data-wow-delay=".25s">
-              <div class="site-heading mb-3">
-                <span class="site-title-tagline justify-content-start">
-                  <i class="flaticon-drive"></i> About Us
-                </span>
-                <h2 class="site-title">
-                  Your Trusted <span>Transfer Service</span> Worldwide
-                </h2>
+        </div>
+
+        <div class="partner pt-80 pb-80">
+          <div class="container">
+            <div class="partner-slider owl-carousel owl-theme">
+              <div class="partner-item">
+                <div class="partner-img">
+                  <img src="assets/img/partner/01.png" alt />
+                </div>
               </div>
-    
-              <!-- About Text -->
-              <p class="about-text">
-                For over 20 years, I have been pursuing my profession with passion and professionalism. During this time, I have gained extensive expertise and profound experience, which I bring to my work every day. As a versatile service provider, I offer a combination of discreet protection, reliable service, and absolute dependability.
-              </p>
-    
-              <!-- Expertise Highlights -->
-              <div class="about-list-wrapper">
-                <ul class="about-list list-unstyled">
+              <div class="partner-item">
+                <div class="partner-img">
+                  <img src="assets/img/partner/02.png" alt />
+                </div>
+              </div>
+              <div class="partner-item">
+                <div class="partner-img">
+                  <img src="assets/img/partner/03.png" alt />
+                </div>
+              </div>
+              <div class="partner-item">
+                <div class="partner-img">
+                  <img src="assets/img/partner/01.png" alt />
+                </div>
+              </div>
+              <div class="partner-item">
+                <div class="partner-img">
+                  <img src="assets/img/partner/02.png" alt />
+                </div>
+              </div>
+              <div class="partner-item">
+                <div class="partner-img">
+                  <img src="assets/img/partner/03.png" alt />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer-area">
+        <div class="footer-widget">
+          <div class="container">
+            <div class="row footer-widget-wrapper pt-120 pb-70">
+              <div class="col-md-6 col-lg-4">
+                <div class="footer-widget-box about-us">
+                  <a class="footer-logo" href="#">
+                    <!-- <img src="assets/img/logo/logo.png" alt="logo"> -->
+                    <h1 style="color: white">
+                      <span style="color: #1eacc7">Book</span> Driver
+                    </h1>
+                  </a>
+                  <p class="mb-3">
+                    We are many variations of passages available but the
+                    majority have suffered alteration in some form by injected
+                    humour words believable.
+                  </p>
+                  <ul class="footer-contact">
+                    <li>
+                      <a href="tel:+21236547898"
+                        ><i class="far fa-phone"></i>+2 123 654 7898</a
+                      >
+                    </li>
+                    <li>
+                      <i class="far fa-map-marker-alt"></i>25/B Milford Road,
+                      New York
+                    </li>
+                    <li>
+                      <a
+                        href="https://live.themewild.com/cdn-cgi/l/email-protection#6d04030b022d08150c001d0108430e0200"
+                        ><i class="far fa-envelope"></i
+                        ><span
+                          class="__cf_email__"
+                          data-cfemail="94fdfaf2fbd4f1ecf5f9e4f8f1baf7fbf9"
+                          >[email&#160;protected]</span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-2">
+                <div class="footer-widget-box list">
+                  <h4 class="footer-widget-title">Quick Links</h4>
+                  <ul class="footer-list">
+                    <li>
+                      <a href="#"
+                        ><i class="fas fa-caret-right"></i> About Us</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fas fa-caret-right"></i> Update News</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fas fa-caret-right"></i> Testimonials</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fas fa-caret-right"></i> Terms Of Service</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fas fa-caret-right"></i> Privacy policy</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fas fa-caret-right"></i> Our Drivers</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="footer-widget-box list">
+                  <h4 class="footer-widget-title">Support Center</h4>
+                  <ul class="footer-list">
+                    <li>
+                      <a href="#"><i class="fas fa-caret-right"></i> FAQ's</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fas fa-caret-right"></i> Affiliates</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fas fa-caret-right"></i> Booking Tips</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fas fa-caret-right"></i> Book A Ride</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><i class="fas fa-caret-right"></i> Contact Us</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"><i class="fas fa-caret-right"></i> Sitemap</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="footer-widget-box list">
+                  <h4 class="footer-widget-title">Why Choose Us</h4>
+                  <div class="footer-about">
+                    <ul class="list-unstyled">
+                      <li>Reliable and Professional Service</li>
+                      <li>Highly Trained Drivers</li>
+                      <li>24/7 Availability</li>
+                      <li>Competitive Pricing</li>
+                      <li>Comfortable and Modern Vehicles</li>
+                    </ul>
+                    <p>
+                      Experience the difference with our trusted transfer
+                      services. Your satisfaction and safety are our top
+                      priorities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 align-self-center">
+                <p class="copyright-text">
+                  &copy; Copyright <span id="date"></span>
+                  <a href="#"> Taxica </a> All Rights Reserved.
+                </p>
+              </div>
+              <div class="col-md-6 align-self-center">
+                <ul class="footer-social">
                   <li>
-                    <strong>Passenger Transport:</strong> Safe, comfortable, and punctual. Whether it’s a business trip or a personal occasion, I ensure you reach your destination stress-free.
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
                   </li>
                   <li>
-                    <strong>Personal Protection:</strong> Discreet protection for your safety. I provide tailored solutions to give you peace of mind in any situation.
+                    <a href="#"><i class="fab fa-twitter"></i></a>
                   </li>
                   <li>
-                    <strong>Valuables Transport:</strong> Trusted transportation of valuable goods, where discretion and care are the highest priorities.
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                   </li>
                 </ul>
               </div>
-    
-
-    
-              <!-- Button to Learn More -->
-              <a href="about.html" class="theme-btn mt-4">Discover More<i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
 
-    <div class="service-area bg py-120">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 mx-auto">
-            <div class="site-heading text-center">
-              <span class="site-title-tagline">Services</span>
-              <h2 class="site-title">Our Best Services For You</h2>
-              <div class="heading-divider"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <div class="service-item wow fadeInUp" data-wow-delay=".25s">
-              <div class="service-img">
-                <img src="./assets/img/service/home/1.jpg" alt />
-              </div>
-              <div class="service-icon">
-                <img src="assets/img/icon/taxi-booking-1.svg" alt />
-              </div>
-              <div class="service-content">
-                <h3 class="service-title">
-                  <a href="#">Online Booking</a>
-                </h3>
-                <p class="service-text">
-                  There are many variations of passages orem psum available
-                  but the majority have suffered alteration in some form by
-                  injected.
-                </p>
-                <div class="service-arrow">
-                  <a href="#" class="theme-btn">Read More<i class="fas fa-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="service-item wow fadeInUp" data-wow-delay=".50s">
-              <div class="service-img">
-                <img src="./assets/img/service/home/2.jpg" alt />
-              </div>
-              <div class="service-icon">
-                <img src="assets/img/icon/city-taxi.svg" alt />
-              </div>
-              <div class="service-content">
-                <h3 class="service-title">
-                  <a href="#">City Transport</a>
-                </h3>
-                <p class="service-text">
-                  There are many variations of passages orem psum available
-                  but the majority have suffered alteration in some form by
-                  injected.
-                </p>
-                <div class="service-arrow">
-                  <a href="#" class="theme-btn">Read More<i class="fas fa-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="service-item wow fadeInUp" data-wow-delay=".75s">
-              <div class="service-img">
-                <img src="./assets/img/service/home/3.jpg" alt />
-              </div>
-              <div class="service-icon">
-                <img src="assets/img/icon/airport.svg" alt />
-              </div>
-              <div class="service-content">
-                <h3 class="service-title">
-                  <a href="#">Airport Transport</a>
-                </h3>
-                <p class="service-text">
-                  There are many variations of passages orem psum available
-                  but the majority have suffered alteration in some form by
-                  injected.
-                </p>
-                <div class="service-arrow">
-                  <a href="#" class="theme-btn">Read More<i class="fas fa-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="service-item wow fadeInUp" data-wow-delay=".25s">
-              <div class="service-img">
-                <img src="./assets/img/service/home/4.jpg" alt />
-              </div>
-              <div class="service-icon">
-                <img src="assets/img/icon/business.svg" alt />
-              </div>
-              <div class="service-content">
-                <h3 class="service-title">
-                  <a href="#">Business Transport</a>
-                </h3>
-                <p class="service-text">
-                  There are many variations of passages orem psum available
-                  but the majority have suffered alteration in some form by
-                  injected.
-                </p>
-                <div class="service-arrow">
-                  <a href="#" class="theme-btn">Read More<i class="fas fa-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="service-item wow fadeInUp" data-wow-delay=".50s">
-              <div class="service-img">
-                <img src="./assets/img/service/home/5.jpg" alt />
-              </div>
-              <div class="service-icon">
-                <img src="assets/img/icon/taxi-2.svg" alt />
-              </div>
-              <div class="service-content">
-                <h3 class="service-title">
-                  <a href="#">Regular Transport</a>
-                </h3>
-                <p class="service-text">
-                  There are many variations of passages orem psum available
-                  but the majority have suffered alteration in some form by
-                  injected.
-                </p>
-                <div class="service-arrow">
-                  <a href="#" class="theme-btn">Read More<i class="fas fa-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="service-item wow fadeInUp" data-wow-delay=".75s">
-              <div class="service-img">
-                <img src="./assets/img/service/home/6.jpg" alt />
-              </div>
-              <div class="service-icon">
-                <img src="assets/img/icon/taxi.svg" alt />
-              </div>
-              <div class="service-content">
-                <h3 class="service-title">
-                  <a href="#">Tour Transport</a>
-                </h3>
-                <p class="service-text">
-                  There are many variations of passages orem psum available
-                  but the majority have suffered alteration in some form by
-                  injected.
-                </p>
-                <div class="service-arrow">
-                  <a href="#" class="theme-btn">Read More<i class="fas fa-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <a
+      href="https://wa.me/436677824612"
+      target="_blank"
+      class="btn-whatsapp-pulse"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <div class="taxi-area py-120">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 mx-auto">
-            <div class="site-heading text-center">
-              <span class="site-title-tagline">Our Taxi</span>
-              <h2 class="site-title">Let's Check Available Taxi</h2>
-              <div class="heading-divider"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Filter Controls for Car Types -->
-        <div class="filter-controls">
-          <ul class="filter-btns">
-            <li class="active" data-filter="*">All Taxi</li>
-            <li data-filter=".caravan">Limousine </li>
-            <li data-filter=".limousine">Kombi</li>
-            <li data-filter=".nine-seater">Mini Van</li>
-          </ul>
-        </div>
-
-        <div class="row filter-box">
-          <!-- Caravan Example -->
-          <div class="col-md-6 col-lg-4 filter-item caravan">
-            <div class="taxi-item">
-              <div class="taxi-img">
-                <img src="https://via.placeholder.com/400x300" alt="Caravan Taxi" />
-              </div>
-              <div class="taxi-content">
-                <div class="taxi-head">
-                  <h4>Limousine</h4>
-                </div>
-                <div class="taxi-feature">
-                  <ul>
-
-                    <li>
-                      <i class="far fa-person-seat"></i> Passengers:
-                      <span>6</span>
-                    </li>
-                    <li>
-                      <i class="far fa-suitcase-rolling"></i> Luggage Carry:
-                      <span>4</span>
-                    </li>
-
-                  </ul>
-                </div>
-                <a href="#" class="theme-btn">Book Taxi Now<i class="fas fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Limousine Example -->
-          <div class="col-md-6 col-lg-4 filter-item limousine">
-            <div class="taxi-item">
-              <div class="taxi-img">
-                <img src="https://via.placeholder.com/400x300" alt="Kombi" />
-              </div>
-              <div class="taxi-content">
-                <div class="taxi-head">
-                  <h4>Kombi</h4>
-                </div>
-                <div class="taxi-feature">
-                  <ul>
-
-                    <li>
-                      <i class="far fa-person-seat"></i> Passengers:
-                      <span>3</span>
-                    </li>
-                    <li>
-                      <i class="far fa-suitcase-rolling"></i> Luggage Carry:
-                      <span>3</span>
-                    </li>
-
-                  </ul>
-                </div>
-                <a href="#" class="theme-btn">Book Taxi Now<i class="fas fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 9 Seaters Example -->
-          <div class="col-md-6 col-lg-4 filter-item nine-seater">
-            <div class="taxi-item">
-              <div class="taxi-img">
-                <img src="https://via.placeholder.com/400x300" alt="Mini Van" />
-              </div>
-              <div class="taxi-content">
-                <div class="taxi-head">
-                  <h4>Mini Van </h4>
-                </div>
-                <div class="taxi-feature">
-                  <ul>
-                    <li>
-                      <i class="far fa-person-seat"></i> Passengers:
-                      <span>9</span>
-                    </li>
-                    <li>
-                      <i class="far fa-suitcase-rolling"></i> Luggage Carry:
-                      <span>5</span>
-                    </li>
-                  </ul>
-                </div>
-                <a href="#" class="theme-btn">Book Taxi Now<i class="fas fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,de", // Languages to be included (English, German)
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false, // Disable auto display
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
 
 
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/toastify-js"
+  ></script>
 
-    <div class="video-area vda-2">
-      <div class="container">
-        <div class="video-content" style="
-              background-image: url('./assets/img/video/01.jpg');
-            ">
-          <div class="row align-items-center">
-            <div class="col-lg-12">
-              <div class="video-wrapper">
-                <a class="play-btn popup-youtube" href="./assets/img/video/video.mp4">
-                  <i class="fas fa-play"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Include Toastify JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Toastify/1.12.0/Toastify.min.js"></script>
+    <script
+      data-cfasync="false"
+      src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/jquery.appear.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/counter-up.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/jquery.timepicker.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 
-    <div class="choose-area cha-2 py-120">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="choose-content">
-              <div class="site-heading wow fadeInDown mb-4" data-wow-delay=".25s">
-                <span class="site-title-tagline text-white justify-content-start">
-                  <i class="flaticon-drive"></i> Why Choose Us
-                </span>
-                <h2 class="site-title text-white mb-10">
-                  We are dedicated <span>to providing</span> quality service
-                </h2>
-                <p class="text-white">
-                  With a commitment to quality and safety, we offer reliable
-                  services backed by experienced drivers and modern vehicles,
-                  ensuring every journey is comfortable and secure.
-                </p>
-              </div>
-              <div class="choose-img wow fadeInUp" data-wow-delay=".25s">
-                <img src="https://via.placeholder.com/700x400" alt="Our team providing quality service to clients" />
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="choose-content-wrapper wow fadeInRight" data-wow-delay=".25s">
-              <!-- Feature 1: Best Quality Taxi -->
-              <div class="choose-item">
-                <span class="choose-count">01</span>
-                <div class="choose-item-icon">
-                  <img src="assets/img/icon/taxi-1.svg" alt="Quality taxi icon" />
-                </div>
-                <div class="choose-item-info">
-                  <h3>Best Quality Taxi</h3>
-                  <p>
-                    Our fleet is composed of modern, well-maintained vehicles
-                    to ensure you enjoy a smooth and safe ride to your
-                    destination.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Feature 2: Expert Drivers -->
-              <div class="choose-item ms-lg-5">
-                <span class="choose-count">02</span>
-                <div class="choose-item-icon">
-                  <img src="assets/img/icon/driver.svg" alt="Expert driver icon" />
-                </div>
-                <div class="choose-item-info">
-                  <h3>Expert Drivers</h3>
-                  <p>
-                    Our drivers are highly experienced and prioritize safety
-                    and customer service, making your journey pleasant and
-                    worry-free.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Feature 3: Many Locations -->
-              <div class="choose-item mb-lg-0">
-                <span class="choose-count">03</span>
-                <div class="choose-item-icon">
-                  <img src="assets/img/icon/taxi-location.svg" alt="Multiple locations icon" />
-                </div>
-                <div class="choose-item-info">
-                  <h3>Many Locations</h3>
-                  <p>
-                    With service across numerous locations, we are ready to
-                    assist you wherever you need to go, ensuring convenience
-                    and accessibility.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="faq-area py-120">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="faq-right">
-              <div class="site-heading mb-3">
-                <span class="site-title-tagline justify-content-start">Faq's</span>
-                <h2 class="site-title my-3">
-                  General <span>frequently</span> asked questions
-                </h2>
-              </div>
-              <p class="about-text">
-                We often get asked about our services, and we’re happy to
-                provide answers to your most common queries. Explore the
-                frequently asked questions below to learn more.
-              </p>
-              <div class="faq-img mt-3">
-                <img src="https://via.placeholder.com/900x430"
-                  alt="Customer asking about services with a phone in hand" />
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="accordion" id="accordionExample">
-              <!-- FAQ 1 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    <span><i class="far fa-question"></i></span> How Long Does
-                    A Booking Take?
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    The booking process is fast and easy, typically taking
-                    only a few minutes. You will receive an immediate
-                    confirmation once your booking is completed.
-                  </div>
-                </div>
-              </div>
-
-              <!-- FAQ 2 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <span><i class="far fa-question"></i></span> How Can I
-                    Become A Member?
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    Becoming a member is easy. Simply sign up through our
-                    website, and you can start enjoying exclusive offers and
-                    faster bookings.
-                  </div>
-                </div>
-              </div>
-
-              <!-- FAQ 3 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <span><i class="far fa-question"></i></span> What Payment
-                    Gateway Do You Support?
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    We support a range of secure payment gateways, including
-                    credit/debit cards, PayPal, and bank transfers. All
-                    payments are encrypted for your security.
-                  </div>
-                </div>
-              </div>
-
-              <!-- FAQ 4 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    <span><i class="far fa-question"></i></span> How Can I
-                    Cancel My Request?
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    If you need to cancel your booking, simply visit the "My
-                    Bookings" section on our website or app and select the
-                    "Cancel" option. Cancellations can be made up to 24 hours
-                    before the scheduled time.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="testimonial-area py-120">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 mx-auto">
-            <div class="site-heading text-center">
-              <span class="site-title-tagline"><i class="flaticon-drive"></i> Testimonials</span>
-              <h2 class="site-title text-white">
-                What Our Client <span>Says</span>
-              </h2>
-              <div class="heading-divider"></div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-slider owl-carousel owl-theme">
-          <!-- Testimonial 1 -->
-          <div class="testimonial-single">
-            <div class="testimonial-content">
-              <div class="testimonial-author-img">
-                <img src="assets/img/testimonial/01.jpg" alt="Testimonial by Sylvia Green" />
-              </div>
-              <div class="testimonial-author-info">
-                <h4>Sylvia Green</h4>
-                <p>Customer</p>
-              </div>
-            </div>
-            <div class="testimonial-quote">
-              <span class="testimonial-quote-icon"><i class="far fa-quote-right"></i></span>
-              <p>
-                "There are many variations of words available, but the
-                majority suffer alterations that inject hidden meaning into
-                the text."
-              </p>
-            </div>
-            <div class="testimonial-rate">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div class="testimonial-single">
-            <div class="testimonial-content">
-              <div class="testimonial-author-img">
-                <img src="assets/img/testimonial/02.jpg" alt="Testimonial by Gordo Novak" />
-              </div>
-              <div class="testimonial-author-info">
-                <h4>Gordo Novak</h4>
-                <p>Customer</p>
-              </div>
-            </div>
-            <div class="testimonial-quote">
-              <span class="testimonial-quote-icon"><i class="far fa-quote-right"></i></span>
-              <p>
-                "There are many variations of words available, but the
-                majority suffer alterations that inject hidden meaning into
-                the text."
-              </p>
-            </div>
-            <div class="testimonial-rate">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div class="testimonial-single">
-            <div class="testimonial-content">
-              <div class="testimonial-author-img">
-                <img src="assets/img/testimonial/03.jpg" alt="Testimonial by Reid Butt" />
-              </div>
-              <div class="testimonial-author-info">
-                <h4>Reid Butt</h4>
-                <p>Customer</p>
-              </div>
-            </div>
-            <div class="testimonial-quote">
-              <span class="testimonial-quote-icon"><i class="far fa-quote-right"></i></span>
-              <p>
-                "There are many variations of words available, but the
-                majority suffer alterations that inject hidden meaning into
-                the text."
-              </p>
-            </div>
-            <div class="testimonial-rate">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-
-          <!-- Testimonial 4 -->
-          <div class="testimonial-single">
-            <div class="testimonial-content">
-              <div class="testimonial-author-img">
-                <img src="assets/img/testimonial/04.jpg" alt="Testimonial by Parker Jime" />
-              </div>
-              <div class="testimonial-author-info">
-                <h4>Parker Jime</h4>
-                <p>Customer</p>
-              </div>
-            </div>
-            <div class="testimonial-quote">
-              <span class="testimonial-quote-icon"><i class="far fa-quote-right"></i></span>
-              <p>
-                "There are many variations of words available, but the
-                majority suffer alterations that inject hidden meaning into
-                the text."
-              </p>
-            </div>
-            <div class="testimonial-rate">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-
-          <!-- Testimonial 5 -->
-          <div class="testimonial-single">
-            <div class="testimonial-content">
-              <div class="testimonial-author-img">
-                <img src="assets/img/testimonial/05.jpg" alt="Testimonial by Heruli Nez" />
-              </div>
-              <div class="testimonial-author-info">
-                <h4>Heruli Nez</h4>
-                <p>Customer</p>
-              </div>
-            </div>
-            <div class="testimonial-quote">
-              <span class="testimonial-quote-icon"><i class="far fa-quote-right"></i></span>
-              <p>
-                "There are many variations of words available, but the
-                majority suffer alterations that inject hidden meaning into
-                the text."
-              </p>
-            </div>
-            <div class="testimonial-rate">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cta-area">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-7 text-center text-lg-start">
-            <div class="cta-text cta-divider">
-              <h1>Book Your Cab - Simple and Affordable</h1>
-              <p>
-                It is a long-established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using it is that it has a normal distribution of
-                letters.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-5 text-center text-lg-end">
-            <div class="mb-20">
-              <a href="tel:+21236547898" class="cta-number">
-                <i class="far fa-headset"></i> +2 123 654 7898
-              </a>
-            </div>
-            <div class="cta-btn">
-              <a href="#book-now" class="theme-btn">
-                Book Your Cab <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="partner pt-80 pb-80">
-      <div class="container">
-        <div class="partner-slider owl-carousel owl-theme">
-          <div class="partner-item">
-            <div class="partner-img">
-              <img src="assets/img/partner/01.png" alt />
-            </div>
-          </div>
-          <div class="partner-item">
-            <div class="partner-img">
-              <img src="assets/img/partner/02.png" alt />
-            </div>
-          </div>
-          <div class="partner-item">
-            <div class="partner-img">
-              <img src="assets/img/partner/03.png" alt />
-            </div>
-          </div>
-          <div class="partner-item">
-            <div class="partner-img">
-              <img src="assets/img/partner/01.png" alt />
-            </div>
-          </div>
-          <div class="partner-item">
-            <div class="partner-img">
-              <img src="assets/img/partner/02.png" alt />
-            </div>
-          </div>
-          <div class="partner-item">
-            <div class="partner-img">
-              <img src="assets/img/partner/03.png" alt />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer-area">
-    <div class="footer-widget">
-    <div class="container">
-    <div class="row footer-widget-wrapper pt-120 pb-70">
-    <div class="col-md-6 col-lg-4">
-    <div class="footer-widget-box about-us">
-      <a class="footer-logo" href="#">
-        <!-- <img src="assets/img/logo/logo.png" alt="logo"> -->
-        <h1 style="color: white;"><span style="color: #1eacc7">Book</span> Driver</h1>
-      </a>
-    <p class="mb-3">
-    We are many variations of passages available but the majority have suffered alteration
-    in some form by injected humour words believable.
-    </p>
-    <ul class="footer-contact">
-    <li><a href="tel:+21236547898"><i class="far fa-phone"></i>+2 123 654 7898</a></li>
-    <li><i class="far fa-map-marker-alt"></i>25/B Milford Road, New York</li>
-    <li><a href="https://live.themewild.com/cdn-cgi/l/email-protection#6d04030b022d08150c001d0108430e0200"><i class="far fa-envelope"></i><span class="__cf_email__" data-cfemail="94fdfaf2fbd4f1ecf5f9e4f8f1baf7fbf9">[email&#160;protected]</span></a></li>
-    </ul>
-    </div>
-    </div>
-    <div class="col-md-6 col-lg-2">
-    <div class="footer-widget-box list">
-    <h4 class="footer-widget-title">Quick Links</h4>
-    <ul class="footer-list">
-    <li><a href="#"><i class="fas fa-caret-right"></i> About Us</a></li>
-    <li><a href="#"><i class="fas fa-caret-right"></i> Update News</a></li>
-    <li><a href="#"><i class="fas fa-caret-right"></i> Testimonials</a></li>
-    <li><a href="#"><i class="fas fa-caret-right"></i> Terms Of Service</a></li>
-    <li><a href="#"><i class="fas fa-caret-right"></i> Privacy policy</a></li>
-    <li><a href="#"><i class="fas fa-caret-right"></i> Our Drivers</a></li>
-    </ul>
-    </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-    <div class="footer-widget-box list">
-    <h4 class="footer-widget-title">Support Center</h4>
-    <ul class="footer-list">
-    <li><a href="#"><i class="fas fa-caret-right"></i> FAQ's</a></li>
-    <li><a href="#"><i class="fas fa-caret-right"></i> Affiliates</a></li>
-    <li><a href="#"><i class="fas fa-caret-right"></i> Booking Tips</a></li>
-    <li><a href="#"><i class="fas fa-caret-right"></i> Book A Ride</a></li>
-    <li><a href="#"><i class="fas fa-caret-right"></i> Contact Us</a></li>
-    <li><a href="#"><i class="fas fa-caret-right"></i> Sitemap</a></li>
-    </ul>
-    </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-    <div class="footer-widget-box list">
-    <h4 class="footer-widget-title">Newsletter</h4>
-    <div class="footer-newsletter">
-    <p>Subscribe Our Newsletter To Get Latest Update And News</p>
-    <div class="subscribe-form">
-    <form action="#">
-    <input type="email" class="form-control" placeholder="Your Email">
-    <button class="theme-btn" type="submit">
-    Subscribe Now <i class="far fa-paper-plane"></i>
-    </button>
-    </form>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="copyright">
-    <div class="container">
-    <div class="row">
-    <div class="col-md-6 align-self-center">
-    <p class="copyright-text">
-    &copy; Copyright <span id="date"></span> <a href="#"> Taxica </a> All Rights Reserved.
-    </p>
-    </div>
-    <div class="col-md-6 align-self-center">
-    <ul class="footer-social">
-    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-    </ul>
-    </div>
-    </div>
-    </div>
-    </div>
-    </footer>
-
-</div>
-
-  <a  href="https://wa.me/436677824612" target="_blank" class="btn-whatsapp-pulse">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <!-- Include Toastify JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Toastify/1.12.0/Toastify.min.js"></script>
-  <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-  <script src="assets/js/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/modernizr.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <script src="assets/js/jquery.appear.min.js"></script>
-  <script src="assets/js/jquery.easing.min.js"></script>
-  <script src="assets/js/owl.carousel.min.js"></script>
-  <script src="assets/js/counter-up.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/jquery.timepicker.min.js"></script>
-  <script src="assets/js/jquery.nice-select.min.js"></script>
-  <script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-
-<!-- Mirrored from live.themewild.com/Book Driver/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Dec 2023 14:23:36 GMT -->
-
+  <!-- Mirrored from live.themewild.com/Book Driver/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Dec 2023 14:23:36 GMT -->
 </html>

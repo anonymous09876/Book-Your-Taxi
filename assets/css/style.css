@@ -696,7 +696,7 @@ label {
   margin-right: 0;
 }
 .navbar-brand img {
-  width: 180px;
+  width: 80px;
 }
 .navbar .dropdown-toggle::after {
   display: inline-block;
@@ -1813,7 +1813,7 @@ a.ui-button:active,
 }
 .testimonial-area {
   position: relative;
-  background-image: url('https://via.placeholder.com/1920x1080');
+  background-image: url('../img/taxi/xxxx.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -4512,3 +4512,7 @@ body.rtl-mode .price-wrapper {
     border-radius: 8px; /* Optional: Adds rounded corners */
   }
   
+
+  .list-unstyled li a{
+    color: #fff;
+  }
