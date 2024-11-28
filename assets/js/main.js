@@ -145,3 +145,23 @@
     });
   });
 })(jQuery);
+
+
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+      {
+          pageLanguage: 'en',
+          includedLanguages: 'en,de', // Include only English and German
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      },
+      'google_translate_element'
+  );
+}
+
+// Load the Google Translate script
+(function() {
+  var gtScript = document.createElement('script');
+  gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  document.head.appendChild(gtScript);
+})();

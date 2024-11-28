@@ -79,60 +79,15 @@
               </div>
             </div>
             <div class="header-top-right">
-              <div class="header-top-link">
-                <ul class="navbar-nav">
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      id="languageDropdown"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
-                        class="flag-img"
-                        alt="USA Flag"
-                      />
-                      English
-                    </a>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="languageDropdown"
-                    >
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="#"
-                          onclick="switchLanguage('en')"
-                        >
-                          <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
-                            class="flag-img"
-                            alt="USA Flag"
-                          />
-                          English
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="#"
-                          onclick="switchLanguage('de')"
-                        >
-                          <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png"
-                            class="flag-img"
-                            alt="Germany Flag"
-                          />
-                          German
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+              
+              <div class="language-selector">
+                <!-- These buttons will not be displayed -->
+                <button class="hidden" onclick="changeLanguage('en')">English</button>
+                <button class="hidden" onclick="changeLanguage('de')">German</button>
+            </div>
+            <div id="google_translate_element"></div>
+
+
 
               <!-- <div class="header-top-social">
                 <span>Follow Us: </span>
@@ -303,7 +258,7 @@
         </section>
 
         <!-- Booking Form -->
-        <div class="booking-area">
+        <div class="booking-area" id="book-now">
           <div class="container">
             <div class="booking-form">
               <h4 class="booking-title">Airport Transfer Booking</h4>
@@ -898,7 +853,7 @@
           <div class="row">
             <div class="col-md-6 align-self-center">
               <p class="copyright-text">
-                &copy; <span id="date"></span> <a href="#">Book Driver</a> All
+                &copy; <span id="date"></span> <a href="#"></a> All
                 Rights Reserved.
               </p>
             </div>
@@ -913,18 +868,7 @@
                     >The Webtrix Limited</a
                   >
                 </p>
-                <li>
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-youtube"></i></a>
-                </li>
+
               </ul>
             </div>
           </div>

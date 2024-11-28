@@ -554,11 +554,20 @@ label {
   visibility: visible;
   bottom: 20px;
 }
+
+
+
+
+
+
+
+
 @media all and (min-width: 768px) and (max-width: 1199px) {
   #scroll-top.active {
     bottom: 100px;
   }
 }
+
 .header-top {
   padding: 8px 0 10px;
   position: relative;
@@ -634,24 +643,13 @@ label {
   color: var(--theme-color);
 }
 @media all and (max-width: 1199px) {
-  .header-top-contact ul {
-    gap: 10px;
-  }
-  .header-top-social a {
-    width: 34px;
-    height: 34px;
-    line-height: 37px;
-    margin-left: 0;
-  }
-  .header-top-left {
-    margin-right: 5px;
-  }
+  
 }
-@media all and (max-width: 992px) {
+/* @media all and (max-width: 992px) {
   .header-top {
     display: none;
   }
-}
+} */
 .navbar {
   background: var(--color-white);
   padding-top: 0;
@@ -847,17 +845,16 @@ label {
   display: none;
 }
 @media all and (max-width: 991px) {
-  .navbar {
-    top: 0;
-    right: 0;
-    left: 0;
-    position: fixed;
+
+  .header-top-left{
+    display: none;
   }
+
   .navbar-brand {
     padding-left: 10px;
   }
   .navbar-brand img {
-    width: 130px;
+    width: 60px;
   }
   .navbar-collapse {
     overflow: hidden;
@@ -1055,7 +1052,7 @@ label {
   background: var(--theme-color);
 }
 .sidebar-logo img {
-  width: 220px;
+  width: 100px;
 }
 .sidebar-about {
   margin-top: 40px;
@@ -4139,144 +4136,6 @@ body.rtl-mode .price-wrapper {
     color: var(--theme-color);
   }
 }
-.home-2 .header-top {
-  background: var(--theme-color);
-}
-.home-2 .header-top::before {
-  left: 5%;
-  right: 5%;
-  width: unset;
-  border-radius: 0 0 20px 20px;
-  background: var(--color-dark);
-  border: none;
-}
-.home-2 .header-top::after {
-  display: none;
-}
-.home-2 .about-area .about-experience {
-  left: -50px;
-  top: 50px;
-  background: var(--color-white);
-  color: var(--color-dark);
-}
-.home-2 .service-item {
-  background: var(--color-white);
-  margin-top: 45px;
-  border-radius: 15px;
-}
-.home-2 .service-item::before {
-  display: none;
-}
-.home-2 .download-area {
-  margin-bottom: -150px;
-  position: relative;
-  z-index: 2;
-}
-.home-2 .footer-widget-wrapper {
-  padding-top: 250px;
-}
-.home-2 .hero-single .hero-title span {
-  -webkit-text-stroke: 2px var(--theme-color);
-  -webkit-text-fill-color: transparent;
-}
-.home-3 .header-top {
-  background: var(--theme-color);
-}
-.home-3 .header-top::before {
-  left: 5%;
-  right: 5%;
-  width: unset;
-  border-radius: 0;
-  clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
-  background: var(--color-dark);
-  border: none;
-}
-.home-3 .header-top::after {
-  display: none;
-}
-.home-3 .navbar {
-  background: 0 0;
-  box-shadow: none;
-}
-.home-3 .navbar.fixed-top {
-  background: #fff;
-  box-shadow: var(--box-shadow);
-}
-.home-3 .main {
-  margin-top: -6rem;
-}
-.home-3 .hero-single {
-  padding-top: 180px;
-  background: rgba(255, 179, 0, 0.05);
-}
-.home-3 .hero-shape img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  opacity: 0.1;
-  object-fit: cover;
-}
-.home-3 .hero-single::before {
-  display: none;
-}
-.home-3 .hero-single::after {
-  content: "";
-  position: absolute;
-  width: 420px;
-  height: 100%;
-  background: var(--theme-color);
-  opacity: 0.1;
-  right: 0;
-  top: 0;
-  z-index: -2;
-}
-.home-3 .hero-single .hero-title,
-.home-3 .hero-single p {
-  color: var(--color-dark);
-}
-.home-3 .hero-single .hero-title span {
-  -webkit-text-stroke: 2px var(--theme-color);
-  -webkit-text-fill-color: transparent;
-}
-.home-3 .hero-single .hero-img {
-  position: relative;
-  z-index: 1;
-}
-.home-3 .hero-single .hero-img img {
-  border-radius: 50px;
-}
-.home-3 .hero-single .hero-img::before {
-  content: "";
-  position: absolute;
-  border: 5px solid var(--theme-color);
-  border-radius: 50px;
-  width: 80%;
-  height: 80%;
-  right: -30px;
-  top: -30px;
-  z-index: -1;
-}
-.home-3 .footer-area::before {
-  display: none;
-}
-.home-3 .footer-shape img {
-  position: absolute;
-  width: 60%;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  opacity: 0.1;
-  z-index: -1;
-}
-@media all and (max-width: 991px) {
-  .home-3 .hero-single {
-    padding-top: 220px;
-  }
-  .home-3 .hero-single .hero-img {
-    margin-top: 80px;
-  }
-}
 
 
 
@@ -4518,3 +4377,90 @@ body.rtl-mode .price-wrapper {
   .list-unstyled li a{
     color: #fff;
   }
+
+
+
+  
+/* Hide the language buttons */
+.language-selector .hidden {
+  display: none !important;
+}
+
+/* Style the Google Translate dropdown container */
+.header-top-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+/* Style the Google Translate widget */
+#google_translate_element {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove Google Translate top bar */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+/* Style the dropdown */
+.goog-te-gadget {
+  font-family: Arial, sans-serif !important;
+  color: transparent !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.goog-te-gadget .goog-te-combo:hover {
+  border-color: #999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.goog-te-gadget .goog-te-combo:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76,175,80,0.2);
+}
+
+/* Hide the "Powered by Google Translate" text */
+.goog-logo-link {
+  display: none !important;
+}
+
+
+/* Custom dropdown arrow */
+.goog-te-gadget .goog-te-combo {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+  padding-right: 32px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .goog-te-gadget .goog-te-combo {
+      min-width: 120px;
+      font-size: 13px;
+      padding: 6px 12px;
+  }
+}

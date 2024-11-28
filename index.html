@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from live.themewild.com/Book Driver/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Dec 2023 14:23:05 GMT -->
+  <!-- Mirrored from live.themewild.com// by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Dec 2023 14:23:05 GMT -->
 
   <head>
     <meta charset="UTF-8" />
@@ -59,61 +59,17 @@
                 </ul>
               </div>
             </div>
+
             <div class="header-top-right">
-              <div class="header-top-link">
-                <ul class="navbar-nav">
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      id="languageDropdown"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
-                        class="flag-img"
-                        alt="USA Flag"
-                      />
-                      English
-                    </a>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="languageDropdown"
-                    >
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="#"
-                          onclick="switchLanguage('en')"
-                        >
-                          <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
-                            class="flag-img"
-                            alt="USA Flag"
-                          />
-                          English
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="#"
-                          onclick="switchLanguage('de')"
-                        >
-                          <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png"
-                            class="flag-img"
-                            alt="Germany Flag"
-                          />
-                          German
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+              
+              <div class="language-selector">
+                <!-- These buttons will not be displayed -->
+                <button class="hidden" onclick="changeLanguage('en')">English</button>
+                <button class="hidden" onclick="changeLanguage('de')">German</button>
+            </div>
+            <div id="google_translate_element"></div>
+
+
 
               <!-- <div class="header-top-social">
                 <span>Follow Us: </span>
@@ -124,6 +80,7 @@
               </div> -->
 
             </div>
+            
           </div>
         </div>
       </div>
@@ -246,8 +203,8 @@
 
             <!-- Logo Section -->
             <div class="sidebar-logo">
-              <!-- <img src="assets/img/logo/logo.png" alt="logo"> -->
-              <h1><span style="color: #1eacc7">Book</span> Driver</h1>
+              <img src="assets/img/logo/logo.jpg" alt="logo">
+              <!-- <h1><span style="color: #1eacc7">Book</span> Driver</h1> -->
             </div>
 
             <!-- About Us Section -->
@@ -286,14 +243,6 @@
               </ul>
             </div>
 
-            <!-- Social Media Links Section -->
-            <div class="sidebar-social">
-              <h4>Connect With Us</h4>
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
           </div>
         </div>
       </div>
@@ -450,6 +399,7 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
 
@@ -1148,12 +1098,12 @@
               </div>
               <div class="col-lg-5 text-center text-lg-end">
                 <div class="mb-20">
-                  <a href="tel:+21236547898" class="cta-number">
-                    <i class="far fa-headset"></i> +2 123 654 7898
+                  <a href="tel:+436677824612" class="cta-number">
+                    <i class="far fa-headset"></i> +43 66778 24612
                   </a>
                 </div>
                 <div class="cta-btn">
-                  <a href="#book-now" class="theme-btn">
+                  <a href="tel:+436677824612" class="theme-btn">
                     Book Your Cab <i class="fas fa-arrow-right"></i>
                   </a>
                 </div>
@@ -1336,7 +1286,7 @@
             <div class="row">
               <div class="col-md-6 align-self-center">
                 <p class="copyright-text">
-                  &copy; <span id="date"></span> <a href="#">Book Driver</a> All
+                  &copy; <span id="date"></span> <a href="#"></a> All
                   Rights Reserved.
                 </p>
               </div>
@@ -1351,18 +1301,7 @@
                       >The Webtrix Limited</a
                     >
                   </p>
-                  <li>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                  </li>
+
                 </ul>
               </div>
             </div>
@@ -1379,6 +1318,8 @@
       <i class="fab fa-whatsapp"></i>
     </a>
 
+
+
     <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement(
@@ -1392,10 +1333,7 @@
         );
       }
     </script>
-    <script
-      type="text/javascript"
-      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script
       type="text/javascript"
@@ -1425,5 +1363,5 @@
     <script src="assets/js/main.js"></script>
   </body>
 
-  <!-- Mirrored from live.themewild.com/Book Driver/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Dec 2023 14:23:36 GMT -->
+  <!-- Mirrored from live.themewild.com// by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Dec 2023 14:23:36 GMT -->
 </html>
