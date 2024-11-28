@@ -260,6 +260,122 @@ app.delete('/api/locations/:id', (req, res) => {
 
 
 
+// POST: Add a new car
+app.post('/api/cars', (req, res) => {
+    const { vehicleType, capacity, basePrice, image, status } = req.body;
+
+    // Validation (basic)
+    if (!vehicleType || !capacity || !basePrice || !status) {
+        return res.status(400).json({
+            error: 'All fields are required: vehicleType, capacity, basePrice, status'
+        });
+    }
+
+    // Insert car into database
+    const query = 'INSERT INTO cars (vehicleType, capacity, basePrice, image, status) VALUES (?, ?, ?, ?, ?)';
+    db.query(query, [vehicleType, capacity, basePrice, image, status], (err, result) => {
+        if (err) {
+            console.error('Database error:', err.message);
+            return res.status(500).json({ error: err.message });
+        }
+
+        res.status(201).json({
+            success: true,
+            id: result.insertId,
+            vehicleType,
+            capacity,
+            basePrice,
+            image,
+            status
+        });
+    });
+});
+
+// GET: Get all cars
+app.get('/api/cars', (req, res) => {
+    const query = 'SELECT * FROM cars ORDER BY id';
+    db.query(query, (err, results) => {
+        if (err) {
+            console.error('Database error:', err.message);
+            return res.status(500).json({ error: err.message });
+        }
+        res.json(results);
+    });
+});
+
+// GET: Get a single car by ID
+app.get('/api/cars/:id', (req, res) => {
+    const { id } = req.params;
+    const query = 'SELECT * FROM cars WHERE id = ?';
+
+    db.query(query, [id], (err, results) => {
+        if (err) {
+            console.error('Database error:', err.message);
+            return res.status(500).json({ error: err.message });
+        }
+
+        if (results.length === 0) {
+            return res.status(404).json({ error: 'Car not found' });
+        }
+
+        res.json(results[0]);
+    });
+});
+
+// PUT: Update car details
+app.put('/api/cars/:id', (req, res) => {
+    const { id } = req.params;
+    const { vehicleType, capacity, basePrice, image, status } = req.body;
+
+    // Validation (basic)
+    if (!vehicleType || !capacity || !basePrice || !status) {
+        return res.status(400).json({
+            error: 'All fields are required: vehicleType, capacity, basePrice, status'
+        });
+    }
+
+    const query = 'UPDATE cars SET vehicleType = ?, capacity = ?, basePrice = ?, image = ?, status = ? WHERE id = ?';
+    db.query(query, [vehicleType, capacity, basePrice, image, status, id], (err, result) => {
+        if (err) {
+            console.error('Database error:', err.message);
+            return res.status(500).json({ error: err.message });
+        }
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ error: 'Car not found' });
+        }
+
+        res.json({
+            success: true,
+            message: 'Car updated successfully'
+        });
+    });
+});
+
+// DELETE: Delete car by ID
+app.delete('/api/cars/:id', (req, res) => {
+    const { id } = req.params;
+    const query = 'DELETE FROM cars WHERE id = ?';
+
+    db.query(query, [id], (err, result) => {
+        if (err) {
+            console.error('Database error:', err.message);
+            return res.status(500).json({ error: err.message });
+        }
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ error: 'Car not found' });
+        }
+
+        res.json({
+            success: true,
+            message: 'Car deleted successfully'
+        });
+    });
+});
+
+
+
 
 
 const PORT = process.env.PORT || 5050;

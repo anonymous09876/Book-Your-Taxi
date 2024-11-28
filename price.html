@@ -60,19 +60,19 @@
               <div class="header-top-contact">
                 <ul>
                   <li>
-                    <a href="mailto:silvertaxihobart@gmail.com"
-                      ><i class="far fa-envelope"></i>Email</a
+                    <a href="mailto:info@airportviennatransfers.at"
+                      ><i class="far fa-envelopes"></i>
+                      <span
+                        class="__cf_email__"
+                        data-cfemail="83eaede5ecc3e6fbe2eef3efe6ade0ecee"
+                      >
+                        info@airportviennatransfers.at</span
+                      ></a
                     >
                   </li>
                   <li>
-                    <a href="tel:+21236547898"
-                      ><i class="far fa-phone-volume"></i> +2 123 654 7898</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><i class="far fa-alarm-clock"></i> Sun - Fri (08AM -
-                      10PM)</a
+                    <a href="tel:+436677824612"
+                      ><i class="far fa-phone-volume"></i> +43 66778 24612</a
                     >
                   </li>
                 </ul>
@@ -106,28 +106,42 @@
                           class="dropdown-item"
                           href="#"
                           onclick="switchLanguage('en')"
-                          >English</a
                         >
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
+                            class="flag-img"
+                            alt="USA Flag"
+                          />
+                          English
+                        </a>
                       </li>
                       <li>
                         <a
                           class="dropdown-item"
                           href="#"
                           onclick="switchLanguage('de')"
-                          >German</a
                         >
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png"
+                            class="flag-img"
+                            alt="Germany Flag"
+                          />
+                          German
+                        </a>
                       </li>
                     </ul>
                   </li>
                 </ul>
               </div>
-              <div class="header-top-social">
+
+              <!-- <div class="header-top-social">
                 <span>Follow Us: </span>
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
-              </div>
+              </div> -->
+
             </div>
           </div>
         </div>
@@ -136,20 +150,28 @@
         <nav class="navbar navbar-expand-lg">
           <div class="container position-relative">
             <a class="navbar-brand" href="./index.html">
-              <h1><span style="color: #1eacc7">Book</span> Driver</h1>
+              <img src="assets/img/logo/logo.jpg" alt="logo" />
+              <!-- <h1><span style="color: #1eacc7">Book</span> Driver</h1> -->
             </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#main_nav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-mobile-icon"
-                ><i class="far fa-bars"></i
-              ></span>
-            </button>
+            <div class="mobile-menu-right">
+              <div class="search-btn">
+                <button type="button" class="nav-right-link">
+                  <i class="far fa-search"></i>
+                </button>
+              </div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#main_nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-mobile-icon"
+                  ><i class="far fa-bars"></i
+                ></span>
+              </button>
+            </div>
             <div class="collapse navbar-collapse" id="main_nav">
               <ul class="navbar-nav">
                 <li class="nav-item">
@@ -166,8 +188,9 @@
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    >Order Online</a
                   >
+                    Order Online
+                  </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li>
                       <a class="dropdown-item" href="./toairport.html"
@@ -181,23 +204,51 @@
                     </li>
                   </ul>
                 </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="./price.html">Pricing</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./service.html">Service</a>
                 </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="./contact.html">Contact</a>
                 </li>
               </ul>
+
               <div class="nav-right">
+                <div class="search-btn">
+                  <button type="button" class="nav-right-link">
+                    <i class="far fa-search"></i>
+                  </button>
+                </div>
                 <div class="nav-right-btn mt-2">
-                  <a href="#" class="theme-btn"
+                  <a href="./price.html" class="theme-btn"
                     ><span class="fas fa-taxi"></span>Book A Taxi</a
                   >
                 </div>
+                <div class="sidebar-btn">
+                  <button type="button" class="nav-right-link">
+                    <i class="far fa-bars-filter"></i>
+                  </button>
+                </div>
               </div>
+            </div>
+
+            <div class="search-area">
+              <form action="#">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Type Keyword..."
+                  />
+                  <button type="submit" class="search-icon-btn">
+                    <i class="far fa-search"></i>
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </nav>
@@ -449,30 +500,33 @@
           <div class="row footer-widget-wrapper pt-120 pb-70">
             <div class="col-md-6 col-lg-4">
               <div class="footer-widget-box about-us">
-                <a class="navbar-brand" href="index.html">
-                  <!-- <img src="assets/img/logo/logo.png" alt="logo"> -->
-                  <h1 style="color: #fff">
-                    <span style="color: #1eacc7">Book</span> Driver
-                  </h1>
+                <a class="footer-logo" href="#">
+                  <img src="assets/img/logo/logo.jpg" alt="logo" />
+                  <!-- <h1><span style="color: #1eacc7">Book</span> Driver</h1> -->
                 </a>
                 <p class="mb-3">
-                  We are many variations of passages available, but the majority
-                  have suffered alteration in some form by injected humour,
-                  making them believable.
+                  At our site, we offer a variety of services, each carefully
+                  crafted to meet your needs. While some may have evolved over
+                  time, we ensure every detail maintains its original purpose
+                  and reliability.
                 </p>
                 <ul class="footer-contact">
                   <li>
-                    <a href="tel:+21236547898"
-                      ><i class="far fa-phone"></i>+2 123 654 7898</a
+                    <a href="tel:+436677824612"
+                      ><i class="far fa-phone"></i>+43 66778 24612</a
                     >
                   </li>
                   <li>
-                    <i class="far fa-map-marker-alt"></i> 25/B Milford Road, New
-                    York
+                    <i class="far fa-map-marker-alt"></i>Vienna, Austria
                   </li>
                   <li>
-                    <a href="mailto:info@Book Driver.com"
-                      ><i class="far fa-envelope"></i>info@Book Driver.com</a
+                    <a href="mailto:info@airportviennatransfers.at"
+                      ><i class="far fa-envelopes"></i>
+                      <span
+                        class="__cf_email__"
+                        data-cfemail="83eaede5ecc3e6fbe2eef3efe6ade0ecee"
+                        >info@airportviennatransfers.at</span
+                      ></a
                     >
                   </li>
                 </ul>
@@ -483,33 +537,28 @@
                 <h4 class="footer-widget-title">Quick Links</h4>
                 <ul class="footer-list">
                   <li>
+                    <a href="./index.html"
+                      ><i class="fas fa-caret-right"></i> Home</a
+                    >
+                  </li>
+                  <li>
                     <a href="./about.html"
                       ><i class="fas fa-caret-right"></i> About Us</a
                     >
                   </li>
                   <li>
-                    <a href="#"
-                      ><i class="fas fa-caret-right"></i> Update News</a
+                    <a href="./service.html"
+                      ><i class="fas fa-caret-right"></i> Service</a
                     >
                   </li>
                   <li>
-                    <a href="#"
-                      ><i class="fas fa-caret-right"></i> Testimonials</a
+                    <a href="./contact.html"
+                      ><i class="fas fa-caret-right"></i> Contact</a
                     >
                   </li>
                   <li>
-                    <a href="#"
-                      ><i class="fas fa-caret-right"></i> Terms Of Service</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><i class="fas fa-caret-right"></i> Privacy Policy</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><i class="fas fa-caret-right"></i> Our Drivers</a
+                    <a href="./price.html"
+                      ><i class="fas fa-caret-right"></i> Pricing</a
                     >
                   </li>
                 </ul>
@@ -520,34 +569,40 @@
                 <h4 class="footer-widget-title">Support Center</h4>
                 <ul class="footer-list">
                   <li>
-                    <a href="#"><i class="fas fa-caret-right"></i> FAQ's</a>
+                    <a href="./contact.html"><i class="fas fa-caret-right"></i> FAQ's</a>
                   </li>
                   <li>
-                    <a href="#"
+                    <a href="./contact.html"
                       ><i class="fas fa-caret-right"></i> Affiliates</a
                     >
                   </li>
                   <li>
-                    <a href="#"
+                    <a href="./contact.html"
                       ><i class="fas fa-caret-right"></i> Booking Tips</a
                     >
                   </li>
                   <li>
-                    <a href="#"
-                      ><i class="fas fa-caret-right"></i> Book A Ride</a
+                    <a href="./toairport.html"
+                      ><i class="fas fa-caret-right"></i> Book A Ride to Airport</a
                     >
                   </li>
                   <li>
-                    <a href="#"
+                    <a href="./fromairport.html"
+                      ><i class="fas fa-caret-right"></i> Book A Ride From Airport</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./contact.html"
                       ><i class="fas fa-caret-right"></i> Contact Us</a
                     >
                   </li>
                   <li>
-                    <a href="#"><i class="fas fa-caret-right"></i> Sitemap</a>
+                    <a href="./contact.html"><i class="fas fa-caret-right"></i> Sitemap</a>
                   </li>
                 </ul>
               </div>
             </div>
+
             <div class="col-md-6 col-lg-3">
               <div class="footer-widget-box list">
                 <h4 class="footer-widget-title">Why Choose Us</h4>
@@ -575,8 +630,8 @@
           <div class="row">
             <div class="col-md-6 align-self-center">
               <p class="copyright-text">
-                &copy; Copyright <span id="date"></span>
-                <a href="#">Book Driver</a> All Rights Reserved.
+                &copy; <span id="date"></span> <a href="#">Book Driver</a> All
+                Rights Reserved.
               </p>
             </div>
             <div class="col-md-6 align-self-center">
@@ -587,7 +642,7 @@
                     href="https://thewebtrix.co.uk/"
                     style="color: crimson"
                     target="_blank"
-                    >The Web Trix</a
+                    >The Webtrix Limited</a
                   >
                 </p>
                 <li>

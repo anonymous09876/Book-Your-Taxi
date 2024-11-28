@@ -594,6 +594,7 @@ label {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 100px;
 }
 .header-top-contact ul {
   display: flex;
@@ -3942,7 +3943,8 @@ body.rtl-mode .price-wrapper {
   z-index: 1;
 }
 .footer-logo img {
-  width: 210px;
+  width: 80px;
+  margin-top: -40px;
   margin-bottom: 20px;
 }
 .copyright {
