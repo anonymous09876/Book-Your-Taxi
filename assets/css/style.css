@@ -695,7 +695,7 @@ label {
   margin-right: 0;
 }
 .navbar-brand img {
-  width: 80px;
+  width: 120px;
 }
 .navbar .dropdown-toggle::after {
   display: inline-block;
@@ -854,7 +854,7 @@ label {
     padding-left: 10px;
   }
   .navbar-brand img {
-    width: 60px;
+    width: 120px;
   }
   .navbar-collapse {
     overflow: hidden;
@@ -3299,16 +3299,19 @@ a.ui-button:active,
 .pagination .page-item.active .page-link {
   background: var(--theme-color);
   color: var(--color-white);
-}
+}  
 body.rtl-mode {
   direction: rtl;
 }
+
 body.rtl-mode .item-area {
   direction: ltr;
 }
+
 body.rtl-mode .price-wrapper {
   direction: rtl;
 }
+
 @media (min-width: 992px) {
   body.rtl-mode .navbar-brand {
     margin-left: 3rem;

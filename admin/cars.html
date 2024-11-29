@@ -72,12 +72,6 @@
                 <i class="fas fa-car me-2"></i> Cars
               </a>
 
-              <button
-                id="logoutBtn"
-                class="list-group-item list-group-item-action bg-transparent text-white"
-              >
-                <i class="fas fa-sign-out-alt me-2"></i> Logout
-              </button>
             </div>
           </nav>
         </div>
@@ -121,168 +115,7 @@
 
         <main class="p-4">
 
-          <!-- Locations Management Section -->
-          <div id="locationsSection" class="card mb-4">
-            <div
-              class="card-header d-flex justify-content-between align-items-center"
-            >
-              <h5 class="mb-0">Locations Management</h5>
-              <button class="btn btn-primary" onclick="openAddLocationModal()">
-                <i class="fas fa-plus me-2"></i>Add Location
-              </button>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Location Name</th>
-                      <th>Base Price</th>
-                      <th>Status</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody id="locationsTableBody"></tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <!-- Add Location Modal -->
-          <div
-            class="modal fade"
-            id="addLocationModal"
-            tabindex="-1"
-            aria-labelledby="addLocationModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <form id="addLocationForm">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="addLocationModalLabel">
-                      Add Location
-                    </h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="mb-3">
-                      <label for="locationName" class="form-label"
-                        >Location Name</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="locationName"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="basePrice" class="form-label"
-                        >Base Price</label
-                      >
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="basePrice"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button
-                      type="submit"
-                      id="saveLocationBtn"
-                      class="btn btn-primary"
-                    >
-                      Save Location
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div> 
-          </div>
-
-          <!-- Edit Location Modal -->
-          <div
-            class="modal fade"
-            id="editLocationModal"
-            tabindex="-1"
-            aria-labelledby="editLocationModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <form id="editLocationForm">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="editLocationModalLabel">
-                      Edit Location
-                    </h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <input type="hidden" id="editLocationId" />
-                    <div class="mb-3">
-                      <label for="editLocationName" class="form-label"
-                        >Location Name</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="editLocationName"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="editBasePrice" class="form-label"
-                        >Base Price</label
-                      >
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="editBasePrice"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button
-                      type="submit"
-                      id="updateLocationBtn"
-                      class="btn btn-primary"
-                    >
-                      Save Changes
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
+<h1>Cars</h1>
 
         </main>
          
@@ -295,6 +128,6 @@
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
     <!-- <script src="./js/dashboard.js"></script> -->
-    <script src="./js/location.js"></script>
+    <script src="./js/cars.js"></script>
   </body>
 </html>
