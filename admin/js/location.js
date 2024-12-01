@@ -23,7 +23,7 @@ async function loadLocations() {
         }
 
         const data = await response.json();
-        console.log('Locations data:', data);
+        // console.log('Locations data:', data);
         renderLocationsTable(data);
         
         showToast('Locations loaded successfully', 'success');
@@ -42,7 +42,7 @@ function renderLocationsTable(locations) {
         tr.innerHTML = `
             <td>${location.id}</td>
             <td>${location.name}</td>
-            <td>€${location.base_price}</td>
+            <td>€${location.price}</td>
             <td><span class="badge ${location.status === 'active' ? 'bg-success' : 'bg-danger'}">${location.status}</span></td>
             <td>
                 <button class="btn btn-sm btn-primary" onclick="openEditLocationModal(${location.id})">
@@ -61,9 +61,9 @@ async function saveLocation(event) {
     event.preventDefault(); // Prevent form submission that reloads the page
 
     const name = document.getElementById('locationName').value;
-    const basePrice = document.getElementById('basePrice').value;
+    const price = document.getElementById('basePrice').value;
 
-    if (!name || !basePrice) {
+    if (!name || !price) {
         showToast('Please fill all fields', 'error');
         return;
     }
@@ -74,7 +74,7 @@ async function saveLocation(event) {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ name, basePrice })
+            body: JSON.stringify({ name, price })
         });
 
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -104,7 +104,7 @@ async function openEditLocationModal(id) {
         const location = await response.json();
         document.getElementById('editLocationId').value = id;
         document.getElementById('editLocationName').value = location.name;
-        document.getElementById('editBasePrice').value = location.base_price;
+        document.getElementById('editBasePrice').value = location.price;
 
         const modal = new bootstrap.Modal(document.getElementById('editLocationModal'));
         modal.show();
@@ -114,33 +114,12 @@ async function openEditLocationModal(id) {
     }
 }
 
-async function openEditLocationModal(id) {
-    console.log(`Fetching location with ID: ${id}`);
+async function openAddLocationModal(id) {
 
-    try {
-        const response = await fetch(`http://localhost:5050/api/locations/${id}`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const location = await response.json();
-        document.getElementById('editLocationId').value = id;
-        document.getElementById('editLocationName').value = location.name;
-        document.getElementById('editBasePrice').value = location.base_price;
-
-        const modal = new bootstrap.Modal(document.getElementById('editLocationModal'));
-        modal.show();
-    } catch (error) {
-        console.error('Fetch error:', error);
-        showToast('Error fetching location details: ' + error.message, 'error');
-    }
+    const modal = new bootstrap.Modal(document.getElementById('addLocationModal'));
+    modal.show();
 }
+
 
 
 async function deleteLocation(id) {
@@ -164,6 +143,43 @@ async function deleteLocation(id) {
         }
     }
 }
+
+
+
+
+async function updateLocation(e) {
+    e.preventDefault();
+    const id = document.getElementById('editLocationId').value;
+    const name = document.getElementById('editLocationName').value;
+    const price = document.getElementById('editBasePrice').value;
+
+    try {
+        const response = await fetch(`http://localhost:5050/api/update-locations`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, price , id })
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Update response:', data.id);
+        showToast('Location updated successfully', 'success');
+
+        const modal = bootstrap.Modal.getInstance(document.getElementById('editLocationModal'));
+        modal.hide();
+
+        loadLocations(); // Reload the locations to reflect the changes
+    } catch (error) {
+        console.error('Error updating location:', error);
+        showToast('Error updating location: ' + error.message, 'error');
+    }
+}
+
 
 function showToast(message, type) {
     Toastify({

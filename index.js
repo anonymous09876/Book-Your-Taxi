@@ -196,54 +196,40 @@ app.get('/api/locations/:id', (req, res) => {
 
 // Add new location
 app.post('/api/locations', (req, res) => {
-    const { name, basePrice } = req.body;
-    const query = 'INSERT INTO locations (name, base_price, status) VALUES (?, ?, ?)';
+    const { name, price } = req.body;
+    const query = 'INSERT INTO locations (name, price, status) VALUES (?, ?, ?)';
     
-    db.query(query, [name, basePrice, 'active'], (err, result) => {
+    db.query(query, [name, price, 'active'], (err, result) => {
         if (err) {
             return res.status(500).json({ error: err.message });
         }
         res.json({
             id: result.insertId,
             name,
-            base_price: basePrice,
+            price: price,
             status: 'active'
         });
     });
 });
 
-
-async function updateLocation() {
-    const id = document.getElementById('editLocationId').value;
-    const name = document.getElementById('editLocationName').value;
-    const basePrice = document.getElementById('editBasePrice').value;
-
-    try {
-        const response = await fetch(`http://localhost:5050/api/locations/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ name, basePrice })
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+// update location
+app.put('/api/update-locations', (req, res) => {
+    const { name, price , id } = req.body;
+    console.log(req.body);
+    const query = 'UPDATE locations set name = ? , price = ? WHERE id = ?';
+    
+    db.query(query, [name, price, id], (err, result) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
         }
+        res.json({
+            id: result.id,
+            name,
+            price
+        });
+    });
+});
 
-        const data = await response.json();
-        console.log('Update response:', data);
-        showToast('Location updated successfully', 'success');
-
-        const modal = bootstrap.Modal.getInstance(document.getElementById('editLocationModal'));
-        modal.hide();
-
-        loadLocations(); // Reload the locations to reflect the changes
-    } catch (error) {
-        console.error('Error updating location:', error);
-        showToast('Error updating location: ' + error.message, 'error');
-    }
-}
 
 // Delete location
 app.delete('/api/locations/:id', (req, res) => {
