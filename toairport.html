@@ -416,7 +416,7 @@
                   <div class="col-lg-3">
                     <div class="form-group">
                       <label>Type of Vehicle</label>
-                      <select class="form-control" name="vehicle_type" required>
+                      <select class="form-control" name="vehicle_type" id="vehicle_type" required>
                         <option value="">Select Vehicle</option>
                         <option value="Limousine">
                           Limousine (max 3 Personen und 2 Koffer)
@@ -480,8 +480,9 @@
                   <div class="col-lg-12 text-center">
                     <p class="total-price">
                       Total Price: <span id="totalPrice">€ 0</span>
+                      <input type="hidden" name="total_price" id="total_price" />
                     </p>
-                  </div>
+                  </div>  
 
                   <!-- Submit Button -->
                   <div class="col-lg-3 align-self-end mt-20">

@@ -154,10 +154,10 @@ function formatDate(dateString) {
 
 function getStatusColor(status) {
     return {
-        'Pending': 'warning',
-        'Confirmed': 'success',
-        'Completed': 'info',
-        'Cancelled': 'danger'
+        'pending': 'warning',
+        'confirmed': 'success',
+        'completed': 'info',
+        'cancelled': 'danger'
     }[status] || 'secondary';
 }
 

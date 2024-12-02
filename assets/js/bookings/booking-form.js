@@ -46,57 +46,8 @@ document.getElementById('bookingForm').addEventListener('submit', async (e) => {
 
 // Total Price
 
-const PRICES = {
-    baseRates: {
-        'Limousine': 50,
-        'Kombi': 65,
-        'Mini Van': 80
-    },
-    locationRates: {
-        'Donnerskirchen': 45,
-        'Absdorf': 55,
-        'Baden': 65,
-        'Bad Gastein': 85,
-        'Bad Ischl': 95,
-        'Bibione Italien': 150,
-        // Add more cities with their rates
-        'default': 50 // Default price for unlisted cities
-    },
-    additionalCharges: {
-        childrenSeat: 10,
-        extraSuitcase: 5,
-        returnJourney: 0.8
-    }
-};
 
-function calculatePrice() {
-    const vehicleType = document.querySelector('[name="vehicle_type"]').value;
-    const childrenSeat = document.querySelector('[name="children_seat"]').value;
-    const suitcases = parseInt(document.querySelector('[name="number_of_suitcases"]').value) || 0;
-    const returnJourney = document.querySelector('[name="return_journey"]').value;
-    const location = document.querySelector('[name="pickup_city"]').value;
-    
-    // Get location-based price or default price
-    let totalPrice = PRICES.locationRates[location] || PRICES.locationRates.default;
-    
-    // Add vehicle type surcharge
-    totalPrice += PRICES.baseRates[vehicleType] || 0;
 
-    if (childrenSeat === 'Yes') {
-        totalPrice += PRICES.additionalCharges.childrenSeat;
-    }
-
-    if (suitcases > 1) {
-        totalPrice += (suitcases - 1) * PRICES.additionalCharges.extraSuitcase;
-    }
-
-    if (returnJourney === 'Yes') {
-        totalPrice = totalPrice * (1 + PRICES.additionalCharges.returnJourney);
-    }
-
-    document.getElementById('totalPrice').textContent = `€${totalPrice.toFixed(2)}`;
-    return totalPrice;
-}
 
 // Add pickup_city to the list of elements that trigger price updates
 ['vehicle_type', 'children_seat', 'number_of_suitcases', 'return_journey', 'pickup_city'].forEach(inputName => {
@@ -146,9 +97,13 @@ function populateSelectOptions(locations) {
 document.addEventListener('DOMContentLoaded', fetchLocation);
 
 
+// Global variable to store the location price
+let baseLocationPrice = 0;
+
 async function locationPriceHandle() {
     const locationId = document.getElementById('pickup_city').value;
-    const totalPrice =  document.getElementById('totalPrice');
+    const totalPriceElement = document.getElementById('totalPrice');
+    
     try {
         // Await the fetch call
         const response = await fetch(`http://localhost:5050/api/locations/${locationId}`, {
@@ -164,9 +119,68 @@ async function locationPriceHandle() {
         }
 
         const data = await response.json();
-        totalPrice.textContent  = "€ " + data.price;
+        
+        // Store the fetched location price
+        baseLocationPrice = parseFloat(data.price) || 0;
+
+        // Calculate and display the price using the fetched location price
+        calculatePrice();
 
     } catch (err) {
         console.error('Error fetching location price:', err);
+        totalPriceElement.textContent = "€ --"; 
     }
 }
+
+const PRICES = {
+    baseRates: {
+        'Limousine': 50,
+        'Kombi': 65,
+        'Mini Van': 80
+    },
+    additionalCharges: {
+        childrenSeat: 10,
+        extraSuitcase: 5,
+        returnJourney: 0.80
+    }
+};
+
+function calculatePrice() {
+    const vehicleType = document.getElementById('vehicle_type').value;
+    const childrenSeat = document.querySelector('[name="children_seat"]').value;
+    const suitcases = parseInt(document.querySelector('[name="number_of_suitcases"]').value) || 0;
+    const returnJourney = document.querySelector('[name="return_journey"]').value;
+
+    // Start with the base location price
+    let totalPrice = baseLocationPrice;
+
+    // Add vehicle type surcharge
+    if (vehicleType && PRICES.baseRates[vehicleType]) {
+        totalPrice += PRICES.baseRates[vehicleType];
+    }
+
+    // Add charges for child seat
+    if (childrenSeat === 'Yes') {
+        totalPrice += PRICES.additionalCharges.childrenSeat;
+    }
+
+    // Add charges for extra suitcases
+    if (suitcases > 1) {
+        totalPrice += (suitcases - 1) * PRICES.additionalCharges.extraSuitcase;
+    }
+
+    // Apply return journey multiplier, if selected
+    if (returnJourney === 'Yes') {
+        totalPrice *= (1 + PRICES.additionalCharges.returnJourney);
+    }
+
+    // Display the total price in the target element
+    document.getElementById('totalPrice').textContent = `€ ${totalPrice.toFixed(2)}`;
+    document.getElementById('total_price').value = `${totalPrice.toFixed(2)}`;
+}
+
+// Add event listeners for dropdown changes
+document.getElementById('vehicle_type').addEventListener('change', calculatePrice);
+document.querySelector('[name="children_seat"]').addEventListener('change', calculatePrice);
+document.querySelector('[name="number_of_suitcases"]').addEventListener('input', calculatePrice);
+document.querySelector('[name="return_journey"]').addEventListener('change', calculatePrice);

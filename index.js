@@ -30,45 +30,40 @@ db.getConnection((err, connection) => {
 });
 
 // Price calculation function
-function calculateAirportPrice(pickup_city, vehicle_type, passengers, return_journey) {
-    const basePrices = {
-        'Vienna City Center': 35,
-        'Schwechat': 25,
-        'Linz': 180,
-        'Salzburg': 280,
-        'Graz': 200
-    };
+// function calculateAirportPrice(pickup_city, vehicle_type, passengers, return_journey) {
+//     const basePrices = {
+//         'Vienna City Center': 35,
+//         'Schwechat': 25,
+//         'Linz': 180,
+//         'Salzburg': 280,
+//         'Graz': 200
+//     };
 
-    const vehicleMultiplier = {
-        'Standard': 1,
-        'Luxury': 1.5,
-        'Van': 1.8
-    };
+//     const vehicleMultiplier = {
+//         'Standard': 1,
+//         'Luxury': 1.5,
+//         'Van': 1.8
+//     };
 
-    let basePrice = basePrices[pickup_city] || 50;
-    let finalPrice = basePrice * (vehicleMultiplier[vehicle_type] || 1);
+//     let basePrice = basePrices[pickup_city] || 50;
+//     let finalPrice = basePrice * (vehicleMultiplier[vehicle_type] || 1);
 
-    if (passengers > 4) {
-        finalPrice += (passengers - 4) * 10;
-    }
+//     if (passengers > 4) {
+//         finalPrice += (passengers - 4) * 10;
+//     }
 
-    if (return_journey === 'Yes') {
-        finalPrice = finalPrice * 1.8;
-    }
+//     if (return_journey === 'Yes') {
+//         finalPrice = finalPrice * 1.8;
+//     }
 
-    return parseFloat(finalPrice.toFixed(2));
-}
+//     return parseFloat(finalPrice.toFixed(2));
+// }
 
 // Booking submission endpoint
 app.post('/api/bookings', (req, res) => {
     const booking = {
         ...req.body,
-        total_price: calculateAirportPrice(
-            req.body.pickup_city,
-            req.body.vehicle_type,
-            parseInt(req.body.number_of_passengers),
-            req.body.return_journey
-        ),
+        
         status: 'Pending',
         created_at: new Date(),
         updated_at: new Date()
